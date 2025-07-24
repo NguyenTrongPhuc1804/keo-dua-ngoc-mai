@@ -201,14 +201,14 @@ const Footer = () => {
       {/* Floating Contact Buttons */}
       <div className="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
         <a
-          href="tel:0915888999"
+          href="tel:0939387070"
           className="w-14 h-14 bg-nature-green hover:bg-nature-green/90 rounded-full flex items-center justify-center shadow-lg transition-all hover:scale-110"
           aria-label="Gọi điện"
         >
           <Phone className="w-6 h-6 text-white" />
         </a>
         <a
-          href="https://zalo.me/0915888999"
+          href="https://zalo.me/0939387070"
           className="w-14 h-14 bg-blue-500 hover:bg-blue-600 rounded-full flex items-center justify-center shadow-lg transition-all hover:scale-110"
           aria-label="Chat Zalo"
         >
