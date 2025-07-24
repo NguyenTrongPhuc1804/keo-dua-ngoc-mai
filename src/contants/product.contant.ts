@@ -1,0 +1,82 @@
+import { Product } from "@/interfaces/product.interface";
+
+export const PRODUCTS: Product[] = [
+  {
+    id: 1,
+    slug: "keo-dua-truyen-thong",
+    name: "Kẹo Dừa Truyền Thống",
+    origin: "Bến Tre",
+    weight: "100g/hộp",
+    shelfLife: "12 tháng kể từ ngày sản xuất",
+    description:
+      "Hương vị cổ điển của kẹo dừa Bến Tre, được chế biến theo công thức gia truyền.",
+    price: "Liên hệ",
+    image: "/image/keo-dua-beo.jpg",
+    features: ["Nguyên liệu tự nhiên", "Không chất bảo quản"],
+  },
+  {
+    id: 2,
+    slug: "keo-dua-sau-rieng",
+    name: "Kẹo Dừa Sầu Riêng",
+    origin: "Bến Tre",
+    weight: "100g/hộp",
+    shelfLife: "12 tháng kể từ ngày sản xuất",
+    description:
+      "Sự kết hợp hoàn hảo giữa vị ngọt của dừa và hương thơm đặc trưng của sầu riêng.",
+    price: "Liên hệ",
+    image: "/image/keo-dua-sau-rieng.jpg",
+    features: ["Hương sầu riêng", "Vị độc đáo"],
+  },
+  {
+    id: 3,
+    slug: "keo-dua-la-dua",
+    name: "Kẹo Dừa Lá Dứa",
+    origin: "Bến Tre",
+    weight: "100g/hộp",
+    shelfLife: "12 tháng kể từ ngày sản xuất",
+    description:
+      "Màu xanh tự nhiên từ lá dứa, mang đến hương vị thanh mát và đặc biệt.",
+    price: "Liên hệ",
+    image: "/image/keo-dua-la-dua.png",
+    features: ["Hương lá dứa tự nhiên", "Màu sắc hấp dẫn"],
+  },
+  {
+    id: 4,
+    slug: "keo-dua-chuoi-tuoi",
+    name: "Kẹo Dừa Chuối Tươi",
+    origin: "Bến Tre",
+    weight: "100g/hộp",
+    shelfLife: "12 tháng kể từ ngày sản xuất",
+    description:
+      "Phiên bản hiện đại với lớp chuối bên ngoài, giữ nguyên hương vị dừa truyền thống.",
+    price: "Liên hệ",
+    image: "/image/keo-dua-chuoi-tuoi.jpg",
+    features: ["Hương chuối tươi", "Vị ngọt tự nhiên"],
+  },
+  {
+    id: 5,
+    slug: "keo-dua-sau-rieng-dua",
+    name: "Kẹo Dừa Sầu Riêng Dứa",
+    origin: "Bến Tre",
+    weight: "280g/gói",
+    shelfLife: "12 tháng kể từ ngày sản xuất",
+    description:
+      "Hương thơm nồng nàn của sầu riêng và vị chua ngọt dịu nhẹ từ dứa chín.",
+    price: "Liên hệ",
+    image: "/image/keo-sau-rieng-dua.jpg",
+    features: ["Hương thơm sầu riêng", "Vị chua ngọt dịu nhẹ dứa chín"],
+  },
+  {
+    id: 6,
+    slug: "keo-dua-thap-cam",
+    name: "Kẹo Dừa Thập Cẩm",
+    origin: "Bến Tre",
+    weight: "280g/gói",
+    shelfLife: "12 tháng kể từ ngày sản xuất",
+    description:
+      "Vị béo thơm của nước cốt dừa Bến Tre với nhiều loại nguyên liệu tự nhiên hấp dẫn",
+    price: "Liên hệ",
+    image: "/image/keo-dua-tap-cam-2.jpg",
+    features: ["Hương vị đa dạng", "Nguyên liệu tự nhiên"],
+  },
+];
