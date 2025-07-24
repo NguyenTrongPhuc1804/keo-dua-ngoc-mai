@@ -164,12 +164,7 @@ const ProductDetail = ({ product }: { product: Product }) => {
                 variant="hero"
                 size="lg"
                 className="w-full text-lg py-6"
-                onClick={() =>
-                  window.scrollTo({
-                    top: document.body.scrollHeight,
-                    behavior: "smooth",
-                  })
-                }
+                onClick={() => router.push("/#contact")}
               >
                 Liên hệ đặt hàng
               </Button>
