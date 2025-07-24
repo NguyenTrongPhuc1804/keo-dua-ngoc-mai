@@ -17,25 +17,16 @@ const navigationItems = [
 
 const NavigationHeader = () => {
   const router = useRouter();
-  // const scrollToSection = (id: string) => {
-  //   const element = document.getElementById(id);
-  //   if (element) {
-  //     element.scrollIntoView({
-  //       behavior: "smooth",
-  //       block: "start",
-  //     });
-  //   }
-  // };
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-coconut-brown/10 shadow-sm">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div
+          className="flex items-center justify-between h-16 cursor-pointer"
+          onClick={() => router.push("/")}
+        >
           {/* Logo */}
           <div className="flex items-center gap-3">
-            {/* <div className="w-10 h-10 bg-gradient-to-br from-coconut-brown to-nature-green rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-lg">NM</span>
-            </div> */}
             <Image
               src="/image/logo.png"
               alt="Kẹo Dừa Ngọc Mai"
