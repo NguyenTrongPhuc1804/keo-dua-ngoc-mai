@@ -86,9 +86,24 @@ export const PRODUCTS: Product[] = [
     description:
       "Vị béo thơm của nước cốt dừa Bến Tre với nhiều loại nguyên liệu tự nhiên hấp dẫn",
     price: "Liên hệ",
-    image: "/image/keo-dua-tap-cam.jpg",
-    image2: "/image/keo-dua-tap-cam-2.jpeg",
+    image: "/image/keo-dua-tap-cam-2.jpg",
+    image2: "/image/keo-dua-tap-cam.jpeg",
     images: ["/image/keo-dua-tap-cam-2.jpg", "/image/keo-dua-tap-cam.jpeg"],
     features: ["Hương vị đa dạng", "Nguyên liệu tự nhiên"],
+  },
+  {
+    id: 6,
+    slug: "keo-dua-que",
+    name: "Kẹo Dừa Que",
+    origin: "Bến Tre",
+    weight: "120g/gói",
+    shelfLife: "12 tháng kể từ ngày sản xuất",
+    description:
+      "Được làm từ những nguyên liệu tự nhiên như nước cốt dừa tươi, đường mía, và mạch nha",
+    price: "Liên hệ",
+    image: "/image/hero-top.jpg",
+    image2: "/image/hero-top.jpg",
+    images: ["/image/hero-top.jpg"],
+    features: ["Dẻo thơm béo ngậy", "Dư vị ngọt ngào, khó quên"],
   },
 ];
