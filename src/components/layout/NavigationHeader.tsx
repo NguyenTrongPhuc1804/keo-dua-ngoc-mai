@@ -19,10 +19,10 @@ const NavigationHeader = () => {
   const router = useRouter();
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-coconut-brown/10 shadow-sm">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-coconut-brown/10 shadow-sm ">
       <div className="container mx-auto px-4">
         <div
-          className="flex items-center justify-between h-16 cursor-pointer"
+          className="flex items-center justify-between h-16 cursor-pointer "
           onClick={() => router.push("/")}
         >
           {/* Logo */}
@@ -40,7 +40,7 @@ const NavigationHeader = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <ScrollArea className="hidden md:flex flex-1 max-w-2xl mx-8">
+          <ScrollArea className="hidden md:flex flex-1 max-w-lg mx-8">
             <nav className="flex items-center gap-1">
               {navigationItems.map((item) => (
                 <Button
@@ -76,27 +76,27 @@ const NavigationHeader = () => {
                     {item.label}
                   </Button>
                 ))}
-                <Button
+                {/* <Button
                   onClick={() => router.push("/#contact")}
                   variant="hero"
                   size="lg"
                   className="mt-4 "
                 >
                   Đặt Hàng Ngay
-                </Button>
+                </Button> */}
               </nav>
             </SheetContent>
           </Sheet>
 
           {/* Desktop CTA Button */}
-          <Button
+          {/* <Button
             onClick={() => router.push("/#contact")}
             variant="hero"
             size="sm"
             className="hidden md:flex "
           >
             Đặt Hàng Ngay
-          </Button>
+          </Button> */}
         </div>
       </div>
     </header>

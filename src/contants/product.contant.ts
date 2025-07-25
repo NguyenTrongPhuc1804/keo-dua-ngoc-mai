@@ -37,7 +37,7 @@ export const PRODUCTS: Product[] = [
     description:
       "Màu xanh tự nhiên từ lá dứa, mang đến hương vị thanh mát và đặc biệt.",
     price: "Liên hệ",
-    image: "/image/keo-dua-la-dua.png",
+    image: "/image/keo-dua-la-dua.jpg",
     features: ["Hương lá dứa tự nhiên", "Màu sắc hấp dẫn"],
   },
   {
@@ -45,7 +45,7 @@ export const PRODUCTS: Product[] = [
     slug: "keo-dua-chuoi-tuoi",
     name: "Kẹo Dừa Chuối Tươi",
     origin: "Bến Tre",
-    weight: "100g/hộp",
+    weight: "400g/hộp",
     shelfLife: "12 tháng kể từ ngày sản xuất",
     description:
       "Phiên bản hiện đại với lớp chuối bên ngoài, giữ nguyên hương vị dừa truyền thống.",
@@ -71,7 +71,7 @@ export const PRODUCTS: Product[] = [
     slug: "keo-dua-thap-cam",
     name: "Kẹo Dừa Thập Cẩm",
     origin: "Bến Tre",
-    weight: "280g/gói",
+    weight: "250g/gói",
     shelfLife: "12 tháng kể từ ngày sản xuất",
     description:
       "Vị béo thơm của nước cốt dừa Bến Tre với nhiều loại nguyên liệu tự nhiên hấp dẫn",

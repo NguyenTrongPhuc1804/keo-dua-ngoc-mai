@@ -69,7 +69,7 @@ const HeroSection = () => {
           <div className="relative">
             <div className="relative z-10">
               <Image
-                src={"/image/hero-banner.jpg"}
+                src={"/image/hero-top.jpg"}
                 alt="Kẹo Dừa Ngọc Mai"
                 width={600}
                 height={600}

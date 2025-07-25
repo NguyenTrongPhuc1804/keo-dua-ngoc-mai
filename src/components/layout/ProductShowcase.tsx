@@ -36,13 +36,13 @@ const ProductShowcase = () => {
           {PRODUCTS.map((product, index) => (
             <Card
               key={index}
-              className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 bg-white shadow-lg overflow-hidden cursor-pointer"
+              className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 bg-white shadow-lg overflow-hidden "
             >
-              <div className="relative">
+              <div className="relative p-3 sm:p-2">
                 <Image
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-48 sm:object-cover object-fill group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300 rounded-sm"
                   width={500}
                   height={300}
                 />

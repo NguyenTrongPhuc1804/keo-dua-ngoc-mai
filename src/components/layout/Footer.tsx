@@ -1,4 +1,5 @@
 import { Facebook, Mail, MapPin, Phone, MessageCircle } from "lucide-react";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -28,44 +29,44 @@ const Footer = () => {
             <h4 className="text-xl font-bold">Sản Phẩm</h4>
             <ul className="space-y-2 text-coconut-cream/80">
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/#products"
                   className="hover:text-coconut-cream transition-colors"
                 >
                   Kẹo Dừa Truyền Thống
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/#products"
                   className="hover:text-coconut-cream transition-colors"
                 >
                   Kẹo Dừa Sầu Riêng
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/#products"
                   className="hover:text-coconut-cream transition-colors"
                 >
                   Kẹo Dừa Lá Dứa
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/#products"
                   className="hover:text-coconut-cream transition-colors"
                 >
-                  Kẹo Dừa Chocolate
-                </a>
+                  Kẹo Dừa Chuối
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/#products"
                   className="hover:text-coconut-cream transition-colors"
                 >
                   Hộp Quà Tặng
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -75,44 +76,44 @@ const Footer = () => {
             <h4 className="text-xl font-bold">Dịch Vụ</h4>
             <ul className="space-y-2 text-coconut-cream/80">
               <li>
-                <a
+                <Link
                   href="#"
                   className="hover:text-coconut-cream transition-colors"
                 >
                   Đại Lý Phân Phối
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="#"
                   className="hover:text-coconut-cream transition-colors"
                 >
                   Đặt Hàng Online
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="#"
                   className="hover:text-coconut-cream transition-colors"
                 >
                   Giao Hàng Toàn Quốc
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="#"
                   className="hover:text-coconut-cream transition-colors"
                 >
                   Tư Vấn Sản Phẩm
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="#"
                   className="hover:text-coconut-cream transition-colors"
                 >
                   Chăm Sóc Khách Hàng
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -126,7 +127,7 @@ const Footer = () => {
                 <div>
                   <p className="font-medium">Văn Phòng Chính</p>
                   <p className="text-sm">
-                    73B1 Nguyễn Văn Tư, P.7, TP Bến Tre, Việt Nam
+                    73B1 Nguyễn Văn Tư, P.Bến Tre, Vĩnh Long
                   </p>
                 </div>
               </div>
@@ -146,24 +147,24 @@ const Footer = () => {
 
             {/* Social Media */}
             <div className="flex items-center gap-4 pt-4">
-              <a
+              <Link
                 href="#"
                 className="w-10 h-10 bg-coconut-cream/10 hover:bg-coconut-cream/20 rounded-full flex items-center justify-center transition-colors"
               >
                 <Facebook className="w-5 h-5" />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#"
                 className="w-10 h-10 bg-coconut-cream/10 hover:bg-coconut-cream/20 rounded-full flex items-center justify-center transition-colors"
               >
                 <MessageCircle className="w-5 h-5" />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#"
                 className="w-10 h-10 bg-coconut-cream/10 hover:bg-coconut-cream/20 rounded-full flex items-center justify-center transition-colors"
               >
                 <Mail className="w-5 h-5" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -175,24 +176,24 @@ const Footer = () => {
               © 2024 Kẹo Dừa Ngọc Mai. Tất cả quyền được bảo lưu.
             </div>
             <div className="flex items-center gap-6 text-sm text-coconut-cream/80">
-              <a
+              <Link
                 href="#"
                 className="hover:text-coconut-cream transition-colors"
               >
                 Chính Sách Bảo Mật
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#"
                 className="hover:text-coconut-cream transition-colors"
               >
                 Điều Khoản Sử Dụng
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#"
                 className="hover:text-coconut-cream transition-colors"
               >
                 Chính Sách Đổi Trả
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -200,27 +201,27 @@ const Footer = () => {
 
       {/* Floating Contact Buttons */}
       <div className="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
-        <a
+        <Link
           href="tel:0939387070"
           className="w-14 h-14 bg-nature-green hover:bg-nature-green/90 rounded-full flex items-center justify-center shadow-lg transition-all hover:scale-110"
           aria-label="Gọi điện"
         >
           <Phone className="w-6 h-6 text-white" />
-        </a>
-        <a
+        </Link>
+        <Link
           href="https://zalo.me/0939387070"
           className="w-14 h-14 bg-blue-500 hover:bg-blue-600 rounded-full flex items-center justify-center shadow-lg transition-all hover:scale-110"
           aria-label="Chat Zalo"
         >
           <MessageCircle className="w-6 h-6 text-white" />
-        </a>
-        <a
+        </Link>
+        <Link
           href="https://m.me/keodua.ngocmai"
           className="w-14 h-14 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center shadow-lg transition-all hover:scale-110"
           aria-label="Chat Facebook"
         >
           <Facebook className="w-6 h-6 text-white" />
-        </a>
+        </Link>
       </div>
     </footer>
   );

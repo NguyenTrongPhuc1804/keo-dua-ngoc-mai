@@ -212,8 +212,7 @@ const ContactForm = () => {
                       Địa Chỉ
                     </h4>
                     <p className="text-muted-foreground">
-                      {" "}
-                      73B1 Nguyễn Văn Tư, P.7, TP Bến Tre, Việt Nam
+                      73B1 Nguyễn Văn Tư, P.Bến Tre, Vĩnh Long
                     </p>
                   </div>
                 </div>
