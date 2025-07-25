@@ -86,8 +86,8 @@ export const PRODUCTS: Product[] = [
     description:
       "Vị béo thơm của nước cốt dừa Bến Tre với nhiều loại nguyên liệu tự nhiên hấp dẫn",
     price: "Liên hệ",
-    image: "/image/keo-dua-tap-cam-2.jpg",
-    image2: "/image/keo-dua-tap-cam.jpeg",
+    image: "/image/keo-dua-tap-cam.jpg",
+    image2: "/image/keo-dua-tap-cam-2.jpeg",
     images: ["/image/keo-dua-tap-cam-2.jpg", "/image/keo-dua-tap-cam.jpeg"],
     features: ["Hương vị đa dạng", "Nguyên liệu tự nhiên"],
   },
