@@ -5,18 +5,20 @@ import { Product } from "@/interfaces/product.interface";
 import { ArrowLeft, CheckCircle } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import React from "react";
+import React, { useState } from "react";
 const ProductDetail = ({ product }: { product: Product }) => {
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const router = useRouter();
+
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
       <div className="bg-card border-b sticky top-0 z-10">
         <div className="container mx-auto px-4 py-4">
           <Button
-            onClick={() => router.back()}
             variant="outline"
             size="sm"
+            onClick={() => router.push("/")}
             className="gap-2"
           >
             <ArrowLeft className="w-4 h-4" />
@@ -30,14 +32,38 @@ const ProductDetail = ({ product }: { product: Product }) => {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Product Image */}
           <div className="space-y-4">
+            {/* Main Image */}
             <div className="aspect-square rounded-2xl overflow-hidden bg-card shadow-lg">
               <Image
-                src={product.image}
+                src={product.images[selectedImageIndex]}
                 alt={product.name}
-                className="w-full h-full object-contain"
-                width={500}
-                height={500}
+                className="w-full h-full object-contain transition-all duration-300"
+                width={600}
+                height={600}
               />
+            </div>
+
+            {/* Thumbnails */}
+            <div className="flex gap-3 justify-center">
+              {product.images.map((image, index) => (
+                <button
+                  key={index}
+                  onClick={() => setSelectedImageIndex(index)}
+                  className={`w-20 h-20 rounded-lg overflow-hidden border-2 transition-all duration-200 ${
+                    selectedImageIndex === index
+                      ? "border-primary shadow-md scale-105"
+                      : "border-border hover:border-primary/50"
+                  }`}
+                >
+                  <Image
+                    src={image}
+                    alt={`${product.name} - ảnh ${index + 1}`}
+                    className="w-full h-full object-cover"
+                    width={600}
+                    height={600}
+                  />
+                </button>
+              ))}
             </div>
           </div>
 
@@ -68,13 +94,13 @@ const ProductDetail = ({ product }: { product: Product }) => {
                   <div className="flex justify-between items-center">
                     <span className="text-muted-foreground">Trọng lượng:</span>
                     <span className="font-medium text-foreground">
-                      {product?.weight}
+                      {product.weight}
                     </span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-muted-foreground">Hạn sử dụng:</span>
                     <span className="font-medium text-foreground">
-                      {product?.shelfLife}
+                      {product.shelfLife}
                     </span>
                   </div>
                 </div>

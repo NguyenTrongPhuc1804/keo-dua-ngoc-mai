@@ -12,6 +12,8 @@ export const PRODUCTS: Product[] = [
       "Hương vị cổ điển của kẹo dừa Bến Tre, được chế biến theo công thức gia truyền.",
     price: "Liên hệ",
     image: "/image/keo-dua-beo.jpg",
+    image2: "/image/keo-dua-beo.jpg",
+    images: ["/image/keo-dua-beo.jpg", "/image/keo-dua-beo.jpg"],
     features: ["Nguyên liệu tự nhiên", "Không chất bảo quản"],
   },
   {
@@ -25,6 +27,8 @@ export const PRODUCTS: Product[] = [
       "Sự kết hợp hoàn hảo giữa vị ngọt của dừa và hương thơm đặc trưng của sầu riêng.",
     price: "Liên hệ",
     image: "/image/keo-dua-sau-rieng.jpg",
+    image2: "/image/keo-dua-sau-rieng.jpg",
+    images: ["/image/keo-dua-sau-rieng.jpg", "/image/keo-dua-sau-rieng.jpg"],
     features: ["Hương sầu riêng", "Vị độc đáo"],
   },
   {
@@ -38,6 +42,8 @@ export const PRODUCTS: Product[] = [
       "Màu xanh tự nhiên từ lá dứa, mang đến hương vị thanh mát và đặc biệt.",
     price: "Liên hệ",
     image: "/image/keo-dua-la-dua.jpg",
+    image2: "/image/keo-dua-la-dua.jpg",
+    images: ["/image/keo-dua-la-dua.jpg", "/image/keo-dua-la-dua.jpg"],
     features: ["Hương lá dứa tự nhiên", "Màu sắc hấp dẫn"],
   },
   {
@@ -51,6 +57,8 @@ export const PRODUCTS: Product[] = [
       "Phiên bản hiện đại với lớp chuối bên ngoài, giữ nguyên hương vị dừa truyền thống.",
     price: "Liên hệ",
     image: "/image/keo-dua-chuoi-tuoi.jpg",
+    image2: "/image/keo-dua-chuoi-tuoi.jpg",
+    images: ["/image/keo-dua-chuoi-tuoi.jpg", "/image/keo-dua-chuoi-tuoi.jpg"],
     features: ["Hương chuối tươi", "Vị ngọt tự nhiên"],
   },
   {
@@ -64,6 +72,8 @@ export const PRODUCTS: Product[] = [
       "Hương thơm nồng nàn của sầu riêng và vị chua ngọt dịu nhẹ từ dứa chín.",
     price: "Liên hệ",
     image: "/image/keo-sau-rieng-dua.jpg",
+    image2: "/image/keo-sau-rieng-dua.jpg",
+    images: ["/image/keo-sau-rieng-dua.jpg", "/image/keo-sau-rieng-dua.jpg"],
     features: ["Hương thơm sầu riêng", "Vị chua ngọt dịu nhẹ dứa chín"],
   },
   {
@@ -77,6 +87,8 @@ export const PRODUCTS: Product[] = [
       "Vị béo thơm của nước cốt dừa Bến Tre với nhiều loại nguyên liệu tự nhiên hấp dẫn",
     price: "Liên hệ",
     image: "/image/keo-dua-tap-cam-2.jpg",
+    image2: "/image/keo-dua-tap-cam.jpg",
+    images: ["/image/keo-dua-tap-cam-2.jpg", "/image/keo-dua-tap-cam.jpg"],
     features: ["Hương vị đa dạng", "Nguyên liệu tự nhiên"],
   },
 ];

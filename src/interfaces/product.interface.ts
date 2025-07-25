@@ -8,5 +8,7 @@ export interface Product {
   description: string;
   price: string;
   image: string;
+  image2?: string; // Optional, as not all products may have a second image
+  images: string[]; // Array of image paths
   features: string[];
 }

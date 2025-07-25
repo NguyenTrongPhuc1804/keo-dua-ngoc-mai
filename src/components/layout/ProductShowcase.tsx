@@ -36,20 +36,29 @@ const ProductShowcase = () => {
           {PRODUCTS.map((product, index) => (
             <Card
               key={index}
-              className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 bg-white shadow-lg overflow-hidden "
+              className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 bg-white shadow-lg overflow-hidden cursor-pointer"
             >
-              <div className="relative p-3 sm:p-2">
+              <div className="relative overflow-hidden">
                 <Image
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300 rounded-sm"
-                  width={500}
-                  height={300}
+                  className="w-full h-48 object-cover group-hover:scale-105 transition-all duration-300 group-hover:opacity-0"
+                  width={600}
+                  height={400}
+                />
+                <Image
+                  src={product?.image2 || ""}
+                  alt={`${product.name} - ảnh 2`}
+                  width={600}
+                  height={400}
+                  className="absolute inset-0 w-full h-48 object-contain group-hover:scale-105 transition-all duration-300 opacity-0 group-hover:opacity-100"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
               <CardContent className="p-6">
                 <div className="space-y-4">
+                  <div className="h-2 bg-gradient-to-r from-coconut-brown to-nature-green rounded-full"></div>
+
                   <div>
                     <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-coconut-brown transition-colors">
                       {product.name}
@@ -77,7 +86,7 @@ const ProductShowcase = () => {
                     </span>
                     <Button variant="cta" size="sm">
                       <Link href={`/product/${product.slug}`}>
-                        Xem chi tiết
+                        Xem Chi Tiết
                       </Link>
                     </Button>
                   </div>

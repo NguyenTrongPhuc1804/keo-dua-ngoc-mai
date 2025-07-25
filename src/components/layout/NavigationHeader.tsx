@@ -21,12 +21,12 @@ const NavigationHeader = () => {
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-coconut-brown/10 shadow-sm ">
       <div className="container mx-auto px-4">
-        <div
-          className="flex items-center justify-between h-16 cursor-pointer "
-          onClick={() => router.push("/")}
-        >
+        <div className="flex items-center justify-between h-16 cursor-pointer ">
           {/* Logo */}
-          <div className="flex items-center gap-3">
+          <div
+            className="flex items-center gap-3"
+            onClick={() => router.push("/")}
+          >
             <Image
               src="/image/logo.png"
               alt="Kẹo Dừa Ngọc Mai"
