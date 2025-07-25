@@ -16,7 +16,7 @@ const BrandIntroduction = () => {
           {/* Image */}
           <div className="relative">
             <Image
-              src="/image/intro-brand.jpg"
+              src="/image/intro-brand.png"
               alt="Vườn dừa Bến Tre"
               className="w-full h-full object-cover rounded-2xl shadow-lg"
               width={500}
