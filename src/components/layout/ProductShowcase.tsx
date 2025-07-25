@@ -57,8 +57,6 @@ const ProductShowcase = () => {
               </div>
               <CardContent className="p-6">
                 <div className="space-y-4">
-                  <div className="h-2 bg-gradient-to-r from-coconut-brown to-nature-green rounded-full"></div>
-
                   <div>
                     <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-coconut-brown transition-colors">
                       {product.name}
