@@ -6,7 +6,7 @@ export const PRODUCTS: Product[] = [
     slug: "keo-dua-truyen-thong",
     name: "Kẹo Dừa Truyền Thống",
     origin: "Bến Tre",
-    weight: "100g/hộp",
+    weight: "400g/hộp",
     shelfLife: "12 tháng kể từ ngày sản xuất",
     description:
       "Hương vị cổ điển của kẹo dừa Bến Tre, được chế biến theo công thức gia truyền.",
@@ -21,7 +21,7 @@ export const PRODUCTS: Product[] = [
     slug: "keo-dua-sau-rieng",
     name: "Kẹo Dừa Sầu Riêng",
     origin: "Bến Tre",
-    weight: "100g/hộp",
+    weight: "400g/hộp",
     shelfLife: "12 tháng kể từ ngày sản xuất",
     description:
       "Sự kết hợp hoàn hảo giữa vị ngọt của dừa và hương thơm đặc trưng của sầu riêng.",
@@ -36,7 +36,7 @@ export const PRODUCTS: Product[] = [
     slug: "keo-dua-la-dua",
     name: "Kẹo Dừa Lá Dứa",
     origin: "Bến Tre",
-    weight: "100g/hộp",
+    weight: "400g/hộp",
     shelfLife: "12 tháng kể từ ngày sản xuất",
     description:
       "Màu xanh tự nhiên từ lá dứa, mang đến hương vị thanh mát và đặc biệt.",
@@ -66,7 +66,7 @@ export const PRODUCTS: Product[] = [
     slug: "keo-dua-sau-rieng-dua",
     name: "Kẹo Dừa Sầu Riêng Dứa",
     origin: "Bến Tre",
-    weight: "280g/gói",
+    weight: "250g/gói",
     shelfLife: "12 tháng kể từ ngày sản xuất",
     description:
       "Hương thơm nồng nàn của sầu riêng và vị chua ngọt dịu nhẹ từ dứa chín.",

@@ -21,40 +21,101 @@ import {
   MessageCircle,
 } from "lucide-react";
 import { toast } from "sonner";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import {
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+  Form,
+} from "../ui/form";
+
+const formSchema = z.object({
+  name: z
+    .string()
+    .nonempty("Họ tên là bắt buộc")
+    .min(1, "Họ và tên là bắt buộc"),
+  email: z.string().nonempty("Email là bắt buộc").email("Email không hợp lệ"),
+  message: z.string().min(1, "Nội dung là bắt buộc"),
+  phone: z.string().min(9, "Số điện thoại phải có ít nhất 9 chữ số"),
+});
 
 const ContactForm = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    email: "",
-    product: "",
-    quantity: "",
-    message: "",
+  // const [formData, setFormData] = useState({
+  //   name: "",
+  //   phone: "",
+  //   email: "",
+  //   product: "",
+  //   quantity: "",
+  //   message: "",
+  // });
+
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   // Simulate form submission
+  //   toast.success("Đơn hàng đã được gửi!", {
+  //     description:
+  //       "Chúng tôi sẽ liên hệ với bạn trong vòng 24h. Cảm ơn bạn đã quan tâm đến sản phẩm Ngọc Mai!",
+  //   });
+  //   setFormData({
+  //     name: "",
+  //     phone: "",
+  //     email: "",
+  //     product: "",
+  //     quantity: "",
+  //     message: "",
+  //   });
+  // };
+
+  // const handleInputChange = (field: string, value: string) => {
+  //   setFormData((prev) => ({
+  //     ...prev,
+  //     [field]: value,
+  //   }));
+  // };
+
+  //---------------------------------------------------
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      message: "",
+      phone: "",
+    },
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Simulate form submission
-    toast.success("Đơn hàng đã được gửi!", {
-      description:
-        "Chúng tôi sẽ liên hệ với bạn trong vòng 24h. Cảm ơn bạn đã quan tâm đến sản phẩm Ngọc Mai!",
-    });
-    setFormData({
-      name: "",
-      phone: "",
-      email: "",
-      product: "",
-      quantity: "",
-      message: "",
-    });
-  };
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsSubmitting(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
 
-  const handleInputChange = (field: string, value: string) => {
-    setFormData((prev) => ({
-      ...prev,
-      [field]: value,
-    }));
-  };
+      if (!res.ok) {
+        throw new Error("Gửi email thất bại");
+      }
+
+      toast.success(
+        "Gửi liên hệ thành công! Chúng tôi sẽ liên hệ lại với bạn trong thời gian sớm nhất."
+      );
+      form.reset();
+    } catch (error) {
+      console.error("Client error:", error);
+      toast.error("Gửi liên hệ thất bại! Vui lòng thử lại sau.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
 
   return (
     <section
@@ -87,48 +148,89 @@ const ContactForm = () => {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="name">Họ và Tên *</Label>
-                    <Input
-                      id="name"
-                      value={formData.name}
-                      onChange={(e) =>
-                        handleInputChange("name", e.target.value)
-                      }
-                      placeholder="Nhập họ và tên"
-                      required
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="phone">Số Điện Thoại *</Label>
-                    <Input
-                      id="phone"
-                      type="tel"
-                      value={formData.phone}
-                      onChange={(e) =>
-                        handleInputChange("phone", e.target.value)
-                      }
-                      placeholder="Nhập số điện thoại"
-                      required
-                    />
-                  </div>
-                </div>
+              <Form {...form}>
+                <form
+                  onSubmit={form.handleSubmit(onSubmit)}
+                  className="space-y-6"
+                >
+                  <FormField
+                    control={form.control}
+                    name="name"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-sm font-medium">
+                          Họ và tên
+                        </FormLabel>
+                        <FormControl>
+                          <Input placeholder="Nhập họ và tên" {...field} />
+                        </FormControl>
 
-                <div className="space-y-2">
-                  <Label htmlFor="email">Email</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={(e) => handleInputChange("email", e.target.value)}
-                    placeholder="Nhập email (để nhận thông tin chi tiết)"
-                    required
+                        <FormMessage />
+                      </FormItem>
+                    )}
                   />
-                </div>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <FormField
+                        control={form.control}
+                        name="name"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="text-sm font-medium">
+                              Họ và tên
+                            </FormLabel>
+                            <FormControl>
+                              <Input placeholder="Nhập họ và tên" {...field} />
+                            </FormControl>
 
-                <div className="grid md:grid-cols-2 gap-4">
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <FormField
+                        control={form.control}
+                        name="phone"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="text-sm font-medium">
+                              Họ và tên
+                            </FormLabel>
+                            <FormControl>
+                              <Input
+                                placeholder="Nhập số điện thoại"
+                                {...field}
+                              />
+                            </FormControl>
+
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <FormField
+                      control={form.control}
+                      name="email"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-sm font-medium">
+                            Họ và tên
+                          </FormLabel>
+                          <FormControl>
+                            <Input placeholder="Nhập email" {...field} />
+                          </FormControl>
+
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                  </div>
+
+                  {/* <div className="grid md:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="product">Sản Phẩm Quan Tâm</Label>
                     <Select
@@ -166,30 +268,40 @@ const ContactForm = () => {
                       placeholder="Số lượng cần đặt"
                     />
                   </div>
-                </div>
+                </div> */}
 
-                <div className="space-y-2">
-                  <Label htmlFor="message">Ghi Chú</Label>
-                  <Textarea
-                    id="message"
-                    value={formData.message}
-                    onChange={(e) =>
-                      handleInputChange("message", e.target.value)
-                    }
-                    placeholder="Nhập ghi chú hoặc yêu cầu đặc biệt..."
-                    rows={4}
-                  />
-                </div>
+                  <div className="space-y-2">
+                    <FormField
+                      control={form.control}
+                      name="message"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-sm font-medium">
+                            Họ và tên
+                          </FormLabel>
+                          <FormControl>
+                            <Textarea
+                              placeholder="Nhập ghi chú hoặc yêu cầu đặc biệt..."
+                              {...field}
+                            />
+                          </FormControl>
 
-                <Button
-                  type="submit"
-                  variant="hero"
-                  size="lg"
-                  className="w-full"
-                >
-                  Gửi Đơn Hàng
-                </Button>
-              </form>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                  </div>
+
+                  <Button
+                    type="submit"
+                    variant="hero"
+                    size="lg"
+                    className="w-full"
+                  >
+                    {isSubmitting ? "Đang gửi..." : "Gửi tin nhắn"}
+                  </Button>
+                </form>
+              </Form>
             </CardContent>
           </Card>
 
