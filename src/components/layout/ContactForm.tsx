@@ -153,22 +153,6 @@ const ContactForm = () => {
                   onSubmit={form.handleSubmit(onSubmit)}
                   className="space-y-6"
                 >
-                  <FormField
-                    control={form.control}
-                    name="name"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-sm font-medium">
-                          Họ và tên
-                        </FormLabel>
-                        <FormControl>
-                          <Input placeholder="Nhập họ và tên" {...field} />
-                        </FormControl>
-
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <FormField
@@ -195,7 +179,7 @@ const ContactForm = () => {
                         render={({ field }) => (
                           <FormItem>
                             <FormLabel className="text-sm font-medium">
-                              Họ và tên
+                              Số điện thoại
                             </FormLabel>
                             <FormControl>
                               <Input
@@ -218,7 +202,7 @@ const ContactForm = () => {
                       render={({ field }) => (
                         <FormItem>
                           <FormLabel className="text-sm font-medium">
-                            Họ và tên
+                            Email
                           </FormLabel>
                           <FormControl>
                             <Input placeholder="Nhập email" {...field} />
@@ -277,10 +261,11 @@ const ContactForm = () => {
                       render={({ field }) => (
                         <FormItem>
                           <FormLabel className="text-sm font-medium">
-                            Họ và tên
+                            Ghi chú hoặc yêu cầu đặc biệt
                           </FormLabel>
                           <FormControl>
                             <Textarea
+                              required
                               placeholder="Nhập ghi chú hoặc yêu cầu đặc biệt..."
                               {...field}
                             />
