@@ -29,6 +29,7 @@ const ProductShowcase = () => {
             className="w-full max-w-4xl mx-auto h-80 object-cover rounded-3xl shadow-2xl"
             width={600}
             height={400}
+            loading="lazy"
           />
         </div>
         {/* Products Grid */}
@@ -45,6 +46,7 @@ const ProductShowcase = () => {
                   className="w-full h-48 object-cover group-hover:scale-105 transition-all duration-300 group-hover:opacity-0"
                   width={600}
                   height={400}
+                  loading="lazy"
                 />
                 <Image
                   src={product?.image2 || ""}

@@ -71,6 +71,7 @@ const HeroSection = () => {
               <Image
                 src={"/image/hero-top.jpg"}
                 alt="Kẹo Dừa Ngọc Mai"
+                loading="lazy"
                 width={600}
                 height={600}
                 className="w-full h-96 rounded-3xl shadow-2xl object-cover"

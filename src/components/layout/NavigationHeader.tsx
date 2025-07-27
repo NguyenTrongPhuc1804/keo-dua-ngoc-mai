@@ -28,6 +28,7 @@ const NavigationHeader = () => {
             onClick={() => router.push("/")}
           >
             <Image
+              loading="lazy"
               src="/image/logo.png"
               alt="Kẹo Dừa Ngọc Mai"
               width={40}

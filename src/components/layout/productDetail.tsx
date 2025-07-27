@@ -40,6 +40,7 @@ const ProductDetail = ({ product }: { product: Product }) => {
                 className="w-full h-full object-contain transition-all duration-300"
                 width={600}
                 height={600}
+                loading="lazy"
               />
             </div>
 
@@ -61,6 +62,7 @@ const ProductDetail = ({ product }: { product: Product }) => {
                     className="w-full h-full object-cover"
                     width={600}
                     height={600}
+                    loading="lazy"
                   />
                 </button>
               ))}

@@ -19,6 +19,7 @@ const BrandIntroduction = () => {
               src="/image/intro-brand.png"
               alt="Vườn dừa Bến Tre"
               className="w-full h-full object-cover rounded-2xl shadow-lg"
+              loading="lazy"
               width={500}
               height={500}
             />
