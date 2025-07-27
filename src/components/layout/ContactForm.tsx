@@ -323,6 +323,8 @@ const ContactForm = () => {
                       width="600"
                       height="450"
                       loading="lazy"
+                      allowFullScreen
+                      title="Bản đồ Google Maps"
                       referrerPolicy="no-referrer-when-downgrade"
                       className="w-full h-full rounded-lg absolute inset-0"
                     ></iframe>

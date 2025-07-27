@@ -61,7 +61,7 @@ const NavigationHeader = () => {
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="ghost" size="sm" className="md:hidden">
-                <Menu className="h-5 w-5" />
+                <Menu className="h-5 w-5" aria-label="Menu" />
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
