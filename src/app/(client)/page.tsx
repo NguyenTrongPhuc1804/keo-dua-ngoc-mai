@@ -8,8 +8,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title:
-    "Kẹo Dừa Ngọc Mai - Đặc sản Bến Tre Thủ Công Truyền Thống - Hương vị ngọt ngào từ xứ Dừa Bến Tre",
+  title: "Kẹo Dừa Ngọc Mai - Đặc sản Bến Tre Thủ Công Truyền Thống",
   description:
     "Khám phá hương vị đích thực của kẹo dừa Bến Tre tại Kẹo Dừa Ngọc Mai. Sản phẩm thủ công 100% tự nhiên. Đặt hàng ngay để thưởng thức tinh hoa ẩm thực miền Tây!",
   keywords: [
@@ -45,8 +44,7 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    title:
-      "Kẹo Dừa Ngọc Mai - Đặc sản Bến Tre Thủ Công Truyền Thống - Hương vị ngọt ngào từ xứ Dừa Bến Tre",
+    title: "Kẹo Dừa Ngọc Mai - Đặc sản Bến Tre Thủ Công Truyền Thống",
     description:
       "Khám phá hương vị đích thực của kẹo dừa Bến Tre tại Kẹo Dừa Ngọc Mai. Sản phẩm thủ công 100% tự nhiên.",
     images: ["/image/hero-banner.jpg"],
