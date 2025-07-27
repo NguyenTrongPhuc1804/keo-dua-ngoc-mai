@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title:
     "Kẹo Dừa Ngọc Mai - Đặc sản Bến Tre Thủ Công Truyền Thống - Hương vị ngọt ngào từ xứ Dừa Bến Tre",
   description:
-    "Khám phá hương vị đích thực của kẹo dừa Bến Tre tại Kẹo Dừa Ngọc Mai. Sản phẩm thủ công 100% tự nhiên, không chất bảo quản. Đặt hàng ngay để thưởng thức tinh hoa ẩm thực miền Tây!",
+    "Khám phá hương vị đích thực của kẹo dừa Bến Tre tại Kẹo Dừa Ngọc Mai. Sản phẩm thủ công 100% tự nhiên. Đặt hàng ngay để thưởng thức tinh hoa ẩm thực miền Tây!",
   keywords: [
     "kẹo dừa Bến Tre",
     "kẹo dừa thủ công",
@@ -25,10 +25,9 @@ export const metadata: Metadata = {
     "kẹo dừa online",
   ],
   openGraph: {
-    title:
-      "Kẹo Dừa Ngọc Mai - Đặc sản Bến Tre Thủ Công Truyền Thống - Hương vị ngọt ngào từ xứ Dừa Bến Tre",
+    title: "Kẹo Dừa Ngọc Mai - Đặc sản Bến Tre Thủ Công Truyền Thống",
     description:
-      "Khám phá hương vị đích thực của kẹo dừa Bến Tre tại Kẹo Dừa Ngọc Mai. Sản phẩm thủ công 100% tự nhiên, không chất bảo quản.",
+      "Khám phá hương vị đích thực của kẹo dừa Bến Tre tại Kẹo Dừa Ngọc Mai. Sản phẩm thủ công 100% tự nhiên.",
     url: process.env.BASE_URL || "",
     images: [
       {
