@@ -13,7 +13,7 @@ export const PRODUCTS: Product[] = [
     price: "Liên hệ",
     image: "/image/keo-dua-beo.jpg",
     image2: "/image/keo-dua-beo.jpg",
-    images: ["/image/keo-dua-beo.jpg", "/image/keo-dua-beo.jpg"],
+    images: ["/image/keo-dua-beo.jpg"],
     features: ["Nguyên liệu tự nhiên", "Không chất bảo quản"],
   },
   {
@@ -28,7 +28,7 @@ export const PRODUCTS: Product[] = [
     price: "Liên hệ",
     image: "/image/keo-dua-sau-rieng.jpg",
     image2: "/image/keo-dua-sau-rieng.jpg",
-    images: ["/image/keo-dua-sau-rieng.jpg", "/image/keo-dua-sau-rieng.jpg"],
+    images: ["/image/keo-dua-sau-rieng.jpg"],
     features: ["Hương sầu riêng", "Vị độc đáo"],
   },
   {
@@ -43,7 +43,7 @@ export const PRODUCTS: Product[] = [
     price: "Liên hệ",
     image: "/image/keo-dua-la-dua.jpg",
     image2: "/image/keo-dua-la-dua.jpg",
-    images: ["/image/keo-dua-la-dua.jpg", "/image/keo-dua-la-dua.jpg"],
+    images: ["/image/keo-dua-la-dua.jpg"],
     features: ["Hương lá dứa tự nhiên", "Màu sắc hấp dẫn"],
   },
   {
@@ -58,7 +58,7 @@ export const PRODUCTS: Product[] = [
     price: "Liên hệ",
     image: "/image/keo-dua-chuoi-tuoi.jpg",
     image2: "/image/keo-dua-chuoi-tuoi.jpg",
-    images: ["/image/keo-dua-chuoi-tuoi.jpg", "/image/keo-dua-chuoi-tuoi.jpg"],
+    images: ["/image/keo-dua-chuoi-tuoi.jpg"],
     features: ["Hương chuối tươi", "Vị ngọt tự nhiên"],
   },
   {
@@ -73,7 +73,7 @@ export const PRODUCTS: Product[] = [
     price: "Liên hệ",
     image: "/image/keo-sau-rieng-dua.jpg",
     image2: "/image/keo-sau-rieng-dua.jpg",
-    images: ["/image/keo-sau-rieng-dua.jpg", "/image/keo-sau-rieng-dua.jpg"],
+    images: ["/image/keo-sau-rieng-dua.jpg"],
     features: ["Hương thơm sầu riêng", "Vị chua ngọt dịu nhẹ dứa chín"],
   },
   {

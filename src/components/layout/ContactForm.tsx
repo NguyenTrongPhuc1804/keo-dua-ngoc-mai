@@ -3,15 +3,8 @@ import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+
 import {
   MapPin,
   Phone,
@@ -44,39 +37,6 @@ const formSchema = z.object({
 });
 
 const ContactForm = () => {
-  // const [formData, setFormData] = useState({
-  //   name: "",
-  //   phone: "",
-  //   email: "",
-  //   product: "",
-  //   quantity: "",
-  //   message: "",
-  // });
-
-  // const handleSubmit = (e: React.FormEvent) => {
-  //   e.preventDefault();
-  //   // Simulate form submission
-  //   toast.success("Đơn hàng đã được gửi!", {
-  //     description:
-  //       "Chúng tôi sẽ liên hệ với bạn trong vòng 24h. Cảm ơn bạn đã quan tâm đến sản phẩm Ngọc Mai!",
-  //   });
-  //   setFormData({
-  //     name: "",
-  //     phone: "",
-  //     email: "",
-  //     product: "",
-  //     quantity: "",
-  //     message: "",
-  //   });
-  // };
-
-  // const handleInputChange = (field: string, value: string) => {
-  //   setFormData((prev) => ({
-  //     ...prev,
-  //     [field]: value,
-  //   }));
-  // };
-
   //---------------------------------------------------
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -214,46 +174,6 @@ const ContactForm = () => {
                     />
                   </div>
 
-                  {/* <div className="grid md:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="product">Sản Phẩm Quan Tâm</Label>
-                    <Select
-                      value={formData.product}
-                      onValueChange={(value) =>
-                        handleInputChange("product", value)
-                      }
-                    >
-                      <SelectTrigger>
-                        <SelectValue placeholder="Chọn sản phẩm" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="traditional">
-                          Kẹo Dừa Truyền Thống
-                        </SelectItem>
-                        <SelectItem value="durian">
-                          Kẹo Dừa Sầu Riêng
-                        </SelectItem>
-                        <SelectItem value="pandan">Kẹo Dừa Lá Dứa</SelectItem>
-                        <SelectItem value="chocolate">
-                          Kẹo Dừa Chocolate
-                        </SelectItem>
-                        <SelectItem value="mixed">Hộp Kẹo Tổng Hợp</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="quantity">Số Lượng</Label>
-                    <Input
-                      id="quantity"
-                      value={formData.quantity}
-                      onChange={(e) =>
-                        handleInputChange("quantity", e.target.value)
-                      }
-                      placeholder="Số lượng cần đặt"
-                    />
-                  </div>
-                </div> */}
-
                   <div className="space-y-2">
                     <FormField
                       control={form.control}
@@ -335,7 +255,7 @@ const ContactForm = () => {
                       Email
                     </h4>
                     <p className="text-muted-foreground">
-                      info@keodua-ngocmai.vn
+                      keoduangocmaibentre@gmail.com
                     </p>
                   </div>
                 </div>
@@ -368,10 +288,13 @@ const ContactForm = () => {
                   <Button
                     variant="outline"
                     className="h-14 flex items-center gap-3"
+                    onClick={() => {
+                      window.open("tel:0939387070", "_blank");
+                    }}
                   >
-                    <Facebook className="w-5 h-5 text-blue-600" />
+                    <Phone className="w-5 h-5 text-blue-600" />
                     <div className="text-left">
-                      <div className="text-sm font-medium">Facebook</div>
+                      <div className="text-sm font-medium">Số điện thoại</div>
                       <div className="text-xs text-muted-foreground">
                         Kẹo Dừa Ngọc Mai
                       </div>
@@ -381,12 +304,15 @@ const ContactForm = () => {
                   <Button
                     variant="outline"
                     className="h-14 flex items-center gap-3"
+                    onClick={() => {
+                      window.open("https://zalo.me/0939387070", "_blank");
+                    }}
                   >
                     <MessageCircle className="w-5 h-5 text-green-600" />
                     <div className="text-left">
                       <div className="text-sm font-medium">Zalo</div>
                       <div className="text-xs text-muted-foreground">
-                        0915.888.999
+                        0939.387.070
                       </div>
                     </div>
                   </Button>
@@ -403,8 +329,6 @@ const ContactForm = () => {
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.420507408437!2d106.35166277508114!3d10.227628989889705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310aa8711332b453%3A0xe616e91a60e497e!2zNzMgxJAuIE5ndXnhu4VuIFbEg24gVMawLCBQaMaw4budbmcgNywgQuG6v24gVHJlLCBWaWV0bmFt!5e0!3m2!1sen!2s!4v1753257359578!5m2!1sen!2s"
                       width="600"
                       height="450"
-                      // style="border:0;"
-                      // allowFullScreen=""
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
                       className="w-full h-full rounded-lg absolute inset-0"
