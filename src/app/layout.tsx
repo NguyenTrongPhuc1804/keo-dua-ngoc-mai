@@ -31,14 +31,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://keoduangocmai.com"),
+  metadataBase: new URL(process.env.BASE_URL || ""),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
     locale: "vi_VN",
-    url: "https://keoduangocmai.com",
+    url: process.env.BASE_URL || "",
     title: "Kẹo Dừa Ngọc Mai - Hương vị ngọt ngào từ xứ Dừa Bến Tre",
     description:
       "Thưởng thức tinh hoa ẩm thực miền Tây với kẹo dừa Bến Tre được chế biến thủ công từ những nguyên liệu tươi ngon nhất.",

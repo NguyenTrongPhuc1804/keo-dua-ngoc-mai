@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: "Kẹo Dừa Ngọc Mai - Đặc sản Bến Tre Thủ Công Truyền Thống",
     description:
       "Khám phá hương vị đích thực của kẹo dừa Bến Tre tại Kẹo Dừa Ngọc Mai. Sản phẩm thủ công 100% tự nhiên, không chất bảo quản.",
-    url: "https://keoduangocmai.com",
+    url: process.env.BASE_URL || "",
     images: [
       {
         url: "/image/hero-banner.jpg",
@@ -70,9 +70,9 @@ const jsonLd = {
   name: "Kẹo Dừa Ngọc Mai",
   description:
     "Chuyên sản xuất và phân phối kẹo dừa thủ công truyền thống từ Bến Tre",
-  url: "https://keoduangocmai.com",
-  logo: "https://keoduangocmai.com/image/logo.png",
-  image: "https://keoduangocmai.com/image/hero-banner.jpg",
+  url: process.env.BASE_URL || "",
+  logo: process.env.BASE_URL + "/image/logo.png",
+  image: process.env.BASE_URL + "/image/hero-banner.jpg",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Bến Tre",
@@ -98,7 +98,7 @@ const jsonLd = {
           "@type": "Product",
           name: "Kẹo Dừa Tạp Cẩm",
           description: "Kẹo dừa thủ công truyền thống với nhiều loại hương vị",
-          image: "https://keoduangocmai.com/image/keo-dua-tap-cam-1.jpg",
+          image: process.env.BASE_URL + "/image/keo-dua-tap-cam-1.jpg",
           category: "Thực phẩm",
         },
         price: "50000",
