@@ -1,0 +1,84 @@
+{
+  "name": "Kẹo Dừa Ngọc Mai",
+  "short_name": "Kẹo Dừa",
+  "description": "Đặc sản kẹo dừa Bến Tre thủ công truyền thống",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFCB61",
+  "theme_color": "#8B4513",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "vi",
+  "dir": "ltr",
+  "categories": ["food", "shopping", "business"],
+  "icons": [
+    {
+      "src": "/image/favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/image/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/image/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/image/hero-banner.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Trang chủ Kẹo Dừa Ngọc Mai"
+    },
+    {
+      "src": "/image/keo-dua-tap-cam-1.jpg",
+      "sizes": "750x1334",
+      "type": "image/jpeg",
+      "form_factor": "narrow",
+      "label": "Sản phẩm kẹo dừa"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Sản phẩm",
+      "short_name": "Sản phẩm",
+      "description": "Xem danh sách sản phẩm kẹo dừa",
+      "url": "/#products",
+      "icons": [
+        {
+          "src": "/image/favicon-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Liên hệ",
+      "short_name": "Liên hệ",
+      "description": "Liên hệ đặt hàng",
+      "url": "/#contact",
+      "icons": [
+        {
+          "src": "/image/favicon-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  }
+}
