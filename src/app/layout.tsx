@@ -5,6 +5,7 @@ import NavigationHeader from "@/components/layout/NavigationHeader";
 import Footer from "@/components/layout/Footer";
 import NextTopLoader from "nextjs-toploader";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import Head from "next/head";
 
 export const metadata: Metadata = {
   title: {
@@ -108,6 +109,12 @@ export default function RootLayout({
   return (
     <html lang="vi">
       <body className="">
+        <Head>
+          <link rel="icon" href="/favicons/favicon.ico" />
+          <link rel="apple-touch-icon" href="/image/apple-touch-icon.png" />
+          <link rel="manifest" href="/image/site.webmanifest" />
+          <meta name="theme-color" content="#ffffff" />
+        </Head>
         <NextTopLoader />
         <GoogleAnalytics gaId="G-54KQGSXJWC" />
         <NavigationHeader />
