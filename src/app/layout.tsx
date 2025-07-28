@@ -74,27 +74,12 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: [
-      {
-        rel: "icon",
-        url: "/favicons/android-chrome-192x192.png",
-        sizes: "192x192",
-      },
-      new URL(
-        "/favicons/android-chrome-192x192.png",
-        process.env.BASE_URL || ""
-      ),
-      { rel: "icon", url: "/favicons/favicon-32x32.png", sizes: "32x32" },
-      new URL("/favicons/favicon-32x32.png", process.env.BASE_URL || ""),
-    ],
-    shortcut: [{ rel: "shortcut icon", url: "/favicons/favicon.ico" }],
-    apple: [
-      {
-        url: "/image/apple-touch-icon.png",
-        sizes: "180x180",
-        type: "image/png",
-      },
-    ],
+    // icon: [
+    //   {
+    //     rel: "icon",
+    //     url: "/favicons/favicon.ico",
+    //   },
+    // ],
   },
   manifest: "/image/site.webmanifest",
   category: "food",
@@ -116,17 +101,6 @@ export default function RootLayout({
   return (
     <html lang="vi">
       <body className="">
-        <Head>
-          <link
-            id="favicon"
-            rel="icon"
-            href="/favicons/android-chrome-192x192.png"
-          />
-
-          <link rel="apple-touch-icon" href="/image/apple-touch-icon.png" />
-          <link rel="manifest" href="/image/site.webmanifest" />
-          <meta name="theme-color" content="#ffffff" />
-        </Head>
         <NextTopLoader />
         <GoogleAnalytics gaId="G-54KQGSXJWC" />
         <NavigationHeader />
