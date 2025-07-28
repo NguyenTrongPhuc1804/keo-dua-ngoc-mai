@@ -3,6 +3,7 @@ import "./globals.css";
 import "./index.css";
 import NavigationHeader from "@/components/layout/NavigationHeader";
 import Footer from "@/components/layout/Footer";
+import NextTopLoader from "nextjs-toploader";
 
 export const metadata: Metadata = {
   title: {
@@ -103,6 +104,7 @@ export default function RootLayout({
   return (
     <html lang="vi">
       <body className="">
+        <NextTopLoader />
         <NavigationHeader />
         {children}
         <Footer />
