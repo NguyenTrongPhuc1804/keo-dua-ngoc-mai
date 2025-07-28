@@ -17,6 +17,7 @@ const Footer = () => {
                   width={32}
                   height={32}
                   loading="lazy"
+                  className="w-8 h-8 rounded-full   "
                 />
               </div>
               <h3 className="text-2xl font-bold">Ngọc Mai</h3>
@@ -153,7 +154,7 @@ const Footer = () => {
             </div>
 
             {/* Social Media */}
-            <div className="flex items-center gap-4 pt-4">
+            {/* <div className="flex items-center gap-4 pt-4">
               <Link
                 href="#"
                 className="w-10 h-10 bg-coconut-cream/10 hover:bg-coconut-cream/20 rounded-full flex items-center justify-center transition-colors"
@@ -172,7 +173,7 @@ const Footer = () => {
               >
                 <Mail className="w-5 h-5" />
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
 
