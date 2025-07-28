@@ -4,6 +4,7 @@ import "./index.css";
 import NavigationHeader from "@/components/layout/NavigationHeader";
 import Footer from "@/components/layout/Footer";
 import NextTopLoader from "nextjs-toploader";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
   title: {
@@ -105,6 +106,7 @@ export default function RootLayout({
     <html lang="vi">
       <body className="">
         <NextTopLoader />
+        <GoogleAnalytics gaId="G-54KQGSXJWC" />
         <NavigationHeader />
         {children}
         <Footer />
