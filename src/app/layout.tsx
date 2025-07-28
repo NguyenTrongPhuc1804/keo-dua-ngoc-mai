@@ -91,6 +91,7 @@ export const metadata: Metadata = {
     "geo.placename": "Bến Tre, Việt Nam",
     "geo.position": "10.2333;106.3833", // Approximate coordinates of Bến Tre
     ICBM: "10.2333, 106.3833",
+    "google-site-verification": "HrIaxgo277BWjBgoBpZ9qO-jcLb_KJVd-Nhc_czyy6Q",
   },
 };
 
