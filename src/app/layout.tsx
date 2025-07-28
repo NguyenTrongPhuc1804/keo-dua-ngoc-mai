@@ -75,8 +75,15 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { rel: "icon", url: "/favicons/favicon-16x16.png", sizes: "16x16" },
-      new URL("/favicons/favicon-16x16.png", process.env.BASE_URL || ""),
+      {
+        rel: "icon",
+        url: "/favicons/android-chrome-192x192.png",
+        sizes: "192x192",
+      },
+      new URL(
+        "/favicons/android-chrome-192x192.png",
+        process.env.BASE_URL || ""
+      ),
       { rel: "icon", url: "/favicons/favicon-32x32.png", sizes: "32x32" },
       new URL("/favicons/favicon-32x32.png", process.env.BASE_URL || ""),
     ],
@@ -113,9 +120,9 @@ export default function RootLayout({
           <link
             id="favicon"
             rel="icon"
-            href="/favicons/favicon.ico"
-            type="image/x-icon"
+            href="/favicons/android-chrome-192x192.png"
           />
+
           <link rel="apple-touch-icon" href="/image/apple-touch-icon.png" />
           <link rel="manifest" href="/image/site.webmanifest" />
           <meta name="theme-color" content="#ffffff" />
