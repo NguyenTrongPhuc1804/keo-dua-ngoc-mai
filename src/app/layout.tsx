@@ -110,7 +110,12 @@ export default function RootLayout({
     <html lang="vi">
       <body className="">
         <Head>
-          <link rel="icon" href="/favicons/favicon.ico" type="image/x-icon" />
+          <link
+            id="favicon"
+            rel="icon"
+            href="/favicons/favicon.ico"
+            type="image/x-icon"
+          />
           <link rel="apple-touch-icon" href="/image/apple-touch-icon.png" />
           <link rel="manifest" href="/image/site.webmanifest" />
           <meta name="theme-color" content="#ffffff" />
