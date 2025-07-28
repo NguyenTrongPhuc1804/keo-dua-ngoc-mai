@@ -1,4 +1,5 @@
 import { Facebook, Mail, MapPin, Phone, MessageCircle } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
@@ -10,7 +11,13 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 bg-coconut-cream rounded-full flex items-center justify-center">
-                <span className="text-coconut-brown font-bold text-sm">NM</span>
+                <Image
+                  src="/image/logo.png"
+                  alt="Ngọc Mai"
+                  width={32}
+                  height={32}
+                  loading="lazy"
+                />
               </div>
               <h3 className="text-2xl font-bold">Ngọc Mai</h3>
             </div>
