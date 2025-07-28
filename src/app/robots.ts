@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/"],
       },
     ],
-    sitemap: "https://keoduangocmai.com.vn/sitemap.xml",
+    sitemap: `${process.env.BASE_URL}/sitemap.xml`,
   };
 }
