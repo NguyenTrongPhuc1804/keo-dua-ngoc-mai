@@ -215,13 +215,6 @@ const Footer = () => {
         >
           <MessageCircle className="w-6 h-6 text-white" />
         </Link>
-        <Link
-          href="https://m.me/keodua.ngocmai"
-          className="w-14 h-14 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center shadow-lg transition-all hover:scale-110"
-          aria-label="Chat Facebook"
-        >
-          <Facebook className="w-6 h-6 text-white" />
-        </Link>
       </div>
     </footer>
   );
