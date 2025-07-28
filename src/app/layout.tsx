@@ -74,15 +74,9 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: [
-      {
-        rel: "icon",
-        url: "/favicons/favicon.svg",
-        type: "image/svg+xml",
-      },
-    ],
+    icon: "/favicon.svg", // dùng SVG thay vì favicon.ico
   },
-  manifest: "/image/site.webmanifest",
+  // manifest: "/image/site.webmanifest",
   category: "food",
   classification: "Kẹo dừa thủ công truyền thống",
   other: {

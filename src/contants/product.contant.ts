@@ -122,4 +122,19 @@ export const PRODUCTS: Product[] = [
     images: ["/image/web-app-manifest-512x512.png"],
     features: ["Thiết kế sang trọng", "Quà tặng ý nghĩa"],
   },
+  {
+    id: 8,
+    slug: "keo-dua-ngon-nhan-sam",
+    name: "Kẹo Dừa Ngon Nhân Sâm",
+    origin: "Bến Tre",
+    weight: "300g/hộp",
+    shelfLife: "12 tháng kể từ ngày sản xuất",
+    description:
+      "Kẹo dừa ngon với hương vị truyền thống, được làm từ những nguyên liệu tươi ngon nhất.",
+    price: "Liên hệ",
+    image: "/image/quy-trinh.webp",
+    image2: "/image/quy-trinh.webp",
+    images: ["/image/quy-trinh.webp"],
+    features: ["Hương vị truyền thống", "Nguyên liệu tươi ngon"],
+  },
 ];
