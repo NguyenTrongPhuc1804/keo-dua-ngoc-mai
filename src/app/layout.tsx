@@ -74,12 +74,13 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    // icon: [
-    //   {
-    //     rel: "icon",
-    //     url: "/favicons/favicon.ico",
-    //   },
-    // ],
+    icon: [
+      {
+        rel: "icon",
+        url: "/favicons/favicon.svg",
+        type: "image/svg+xml",
+      },
+    ],
   },
   manifest: "/image/site.webmanifest",
   category: "food",
