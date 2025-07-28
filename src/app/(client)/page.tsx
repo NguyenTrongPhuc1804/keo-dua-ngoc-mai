@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         url: "/image/keo-dua-tap-cam-1.jpg",
         width: 800,
         height: 600,
-        alt: "Kẹo dừa tạp cẩm thủ công",
+        alt: "Kẹo dừa thập cẩm thủ công",
       },
     ],
   },
@@ -96,7 +96,7 @@ const jsonLd = {
         "@type": "Offer",
         itemOffered: {
           "@type": "Product",
-          name: "Kẹo Dừa Tạp Cẩm",
+          name: "Kẹo Dừa Thập Cẩm",
           description: "Kẹo dừa thủ công truyền thống với nhiều loại hương vị",
           image: process.env.BASE_URL + "/image/keo-dua-tap-cam-1.jpg",
           category: "Thực phẩm",
