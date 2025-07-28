@@ -5,7 +5,6 @@ import NavigationHeader from "@/components/layout/NavigationHeader";
 import Footer from "@/components/layout/Footer";
 import NextTopLoader from "nextjs-toploader";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import Head from "next/head";
 
 export const metadata: Metadata = {
   title: {
@@ -75,9 +74,12 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico" },
-      { url: "/image/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+      { rel: "icon", url: "/favicons/favicon-16x16.png", sizes: "16x16" },
+      new URL("/favicons/favicon-16x16.png", process.env.BASE_URL || ""),
+      { rel: "icon", url: "/favicons/favicon-32x32.png", sizes: "32x32" },
+      new URL("/favicons/favicon-32x32.png", process.env.BASE_URL || ""),
     ],
+    shortcut: [{ rel: "shortcut icon", url: "/favicons/favicon.ico" }],
     apple: [
       {
         url: "/image/apple-touch-icon.png",
@@ -106,9 +108,6 @@ export default function RootLayout({
   return (
     <html lang="vi">
       <body className="">
-        <Head>
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
         <NextTopLoader />
         <GoogleAnalytics gaId="G-54KQGSXJWC" />
         <NavigationHeader />

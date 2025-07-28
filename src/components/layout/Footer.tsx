@@ -1,4 +1,4 @@
-import { Facebook, Mail, MapPin, Phone, MessageCircle } from "lucide-react";
+import { Mail, MapPin, Phone, MessageCircle } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
