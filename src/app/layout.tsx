@@ -74,8 +74,8 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/favicon.svg", // dùng SVG thay vì favicon.ico
-    shortcut: "/favicon.svg",
+    icon: `${process.env.BASE_URL}/favicon.svg`, // dùng SVG thay vì favicon.ico
+    shortcut: `${process.env.BASE_URL}/favicon.svg`,
   },
   // manifest: "/image/site.webmanifest",
   category: "food",
