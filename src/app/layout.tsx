@@ -74,8 +74,27 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: `${process.env.BASE_URL}/favicon.svg`, // dùng SVG thay vì favicon.ico
+    icon: [
+      { url: `${process.env.BASE_URL}/favicon.svg`, type: "image/svg+xml" },
+      {
+        url: `${process.env.BASE_URL}/image/favicon-32x32.png`,
+        type: "image/png",
+        sizes: "32x32",
+      },
+      {
+        url: `${process.env.BASE_URL}/image/favicon-16x16.png`,
+        type: "image/png",
+        sizes: "16x16",
+      },
+    ],
     shortcut: `${process.env.BASE_URL}/favicon.svg`,
+    apple: [
+      {
+        url: `${process.env.BASE_URL}/image/apple-touch-icon.png`,
+        type: "image/png",
+        sizes: "180x180",
+      },
+    ],
   },
   // manifest: "/image/site.webmanifest",
   category: "food",
