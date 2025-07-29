@@ -71,7 +71,7 @@ const jsonLd = {
   description:
     "Chuyên sản xuất và phân phối kẹo dừa thủ công truyền thống từ Bến Tre",
   url: process.env.BASE_URL || "",
-  logo: process.env.BASE_URL + "/image/logo.png",
+  logo: process.env.BASE_URL + "/favicon.svg",
   image: process.env.BASE_URL + "/image/hero-banner.jpg",
   address: {
     "@type": "PostalAddress",
