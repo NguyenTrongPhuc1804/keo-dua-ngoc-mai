@@ -23,11 +23,17 @@ const HeroSection = () => {
                 <span className="block text-coconut-brown">Ngọc Mai</span>
               </h1>
               <p className="text-2xl lg:text-3xl text-muted-foreground font-medium">
-                Hương vị ngọt ngào từ xứ Dừa
+                Ngọt lành hương vị Bến Tre – Đậm đà tình quê xứ Dừa
               </p>
               <p className="text-lg text-muted-foreground max-w-lg mx-auto lg:mx-0">
-                Thưởng thức tinh hoa ẩm thực miền Tây với kẹo dừa Bến Tre được
-                chế biến thủ công từ những nguyên liệu tươi ngon nhất.
+                Từ vùng đất phù sa trù phú, nơi những rặng dừa xanh ngát reo vui
+                trong nắng, Kẹo Dừa Ngọc Mai ra đời như một món quà ngọt ngào
+                mang đậm hương vị miền Tây Nam Bộ.
+              </p>
+              <p className="text-lg text-muted-foreground max-w-lg mx-auto lg:mx-0">
+                Hãy để Kẹo Dừa Ngọc Mai đồng hành cùng những phút giây sum vầy,
+                những món quà ý nghĩa gửi trao yêu thương chân thành đến người
+                thân, bạn bè.
               </p>
             </div>
 

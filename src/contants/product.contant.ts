@@ -69,12 +69,12 @@ export const PRODUCTS: Product[] = [
     weight: "250g/gói",
     shelfLife: "12 tháng kể từ ngày sản xuất",
     description:
-      "Hương thơm nồng nàn của sầu riêng và vị chua ngọt dịu nhẹ từ dứa chín.",
+      "Hương thơm nồng nàn của sầu riêng và vị ngọt dịu nhẹ từ dứa chín.",
     price: "Liên hệ",
     image: "/image/keo-sau-rieng-dua.jpg",
     image2: "/image/keo-sau-rieng-dua.jpg",
     images: ["/image/keo-sau-rieng-dua.jpg"],
-    features: ["Hương thơm sầu riêng", "Vị chua ngọt dịu nhẹ dứa chín"],
+    features: ["Hương thơm sầu riêng", "Vị ngọt dịu nhẹ dứa chín"],
   },
   {
     id: 6,
@@ -105,36 +105,5 @@ export const PRODUCTS: Product[] = [
     image2: "/image/hero-top.jpg",
     images: ["/image/hero-top.jpg"],
     features: ["Dẻo thơm béo ngậy", "Dư vị ngọt ngào, khó quên"],
-  },
-
-  {
-    id: 7,
-    slug: "hop-qua-tang",
-    name: "Hộp Quà Tặng Kẹo Dừa",
-    origin: "Bến Tre",
-    weight: "500g/hộp",
-    shelfLife: "12 tháng kể từ ngày sản xuất",
-    description:
-      "Hộp quà tặng sang trọng với các loại kẹo dừa đặc trưng, thích hợp làm quà biếu tặng.",
-    price: "Liên hệ",
-    image: "/image/web-app-manifest-512x512.png",
-    image2: "/image/web-app-manifest-512x512.png",
-    images: ["/image/web-app-manifest-512x512.png"],
-    features: ["Thiết kế sang trọng", "Quà tặng ý nghĩa"],
-  },
-  {
-    id: 8,
-    slug: "keo-dua-ngon-nhan-sam",
-    name: "Kẹo Dừa Ngon Nhân Sâm",
-    origin: "Bến Tre",
-    weight: "300g/hộp",
-    shelfLife: "12 tháng kể từ ngày sản xuất",
-    description:
-      "Kẹo dừa ngon với hương vị truyền thống, được làm từ những nguyên liệu tươi ngon nhất.",
-    price: "Liên hệ",
-    image: "/image/quy-trinh.webp",
-    image2: "/image/quy-trinh.webp",
-    images: ["/image/quy-trinh.webp"],
-    features: ["Hương vị truyền thống", "Nguyên liệu tươi ngon"],
   },
 ];
