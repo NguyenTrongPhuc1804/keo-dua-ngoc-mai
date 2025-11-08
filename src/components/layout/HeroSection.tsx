@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 const HeroSection = () => {
+  const t = useTranslations("hero");
   return (
     <section
       id="hero"
@@ -19,21 +22,17 @@ const HeroSection = () => {
           <div className="space-y-8 text-center lg:text-left">
             <div className="space-y-4">
               <h1 className="text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-                Kẹo Dừa
-                <span className="block text-coconut-brown">Ngọc Mai</span>
+                {t("title")}
+                <span className="block text-coconut-brown">{t("name")}</span>
               </h1>
               <p className="text-2xl lg:text-3xl text-muted-foreground font-medium">
-                Ngọt lành hương vị Bến Tre – Đậm đà tình quê xứ Dừa
+                {t("description")}
               </p>
               <p className="text-lg text-muted-foreground max-w-lg mx-auto lg:mx-0">
-                Từ vùng đất phù sa trù phú, nơi những rặng dừa xanh ngát reo vui
-                trong nắng, Kẹo Dừa Ngọc Mai ra đời như một món quà ngọt ngào
-                mang đậm hương vị miền Tây Nam Bộ.
+         { t("description2")}
               </p>
               <p className="text-lg text-muted-foreground max-w-lg mx-auto lg:mx-0">
-                Hãy để Kẹo Dừa Ngọc Mai đồng hành cùng những phút giây sum vầy,
-                những món quà ý nghĩa gửi trao yêu thương chân thành đến người
-                thân, bạn bè.
+          {t("description3")}
               </p>
             </div>
 
@@ -43,14 +42,14 @@ const HeroSection = () => {
                 size="lg"
                 className="text-lg px-8 py-6 cursor-pointer"
               >
-                <a href="#contact">Mua Ngay</a>
+                <Link href="#contact">{t("buyNow")}</Link>
               </Button>
               <Button
                 variant="outline"
                 size="lg"
                 className="text-lg px-8 py-6 cursor-pointer"
               >
-                <a href="#products">Tìm Hiểu Thêm Sản Phẩm</a>
+                <a href="#products">{t("learnMore")}</a>
               </Button>
             </div>
 
@@ -58,15 +57,15 @@ const HeroSection = () => {
             <div className="flex flex-wrap gap-8 justify-center lg:justify-start text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <div className="w-3 h-3 bg-nature-green rounded-full"></div>
-                <span>100% Nguyên Liệu Tự Nhiên</span>
+                <span>{t("naturalIngredients")}</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-3 h-3 bg-coconut-brown rounded-full"></div>
-                <span>Thủ Công Truyền Thống</span>
+                <span>{t("traditionalCraft")}</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-3 h-3 bg-secondary rounded-full"></div>
-                <span>Chứng Nhận ATTP</span>
+                <span>{t("certifiedATTP")}</span>
               </div>
             </div>
           </div>

@@ -1,0 +1,247 @@
+{
+  "brand": {
+    "description": "Founded in 1995 in Ben Tre - the land of lush green coconut trees, Ngoc Mai is proud to be the leading coconut candy brand in the Mekong region.",
+    "description2": "With over 25 years of experience, we always preserve the secret of making traditional candy passed down from generation to generation, combined with modern technology to create high-quality products.",
+    "experience": "Years of Experience",
+    "name": "Ngoc Mai",
+    "naturalIngredients": "Natural Ingredients",
+    "title": "Coconut Candy Brand"
+  },
+  "header": {
+    "contact": "Contact",
+    "home": "Home",
+    "intro": "Introduction",
+    "name": "Ngoc Mai Coconut Candy",
+    "product": "Product",
+    "rating": "Review"
+  },
+  "hero": {
+    "buyNow": "Buy Now",
+    "certifiedATTP": "Food Safety Certificate",
+    "description": "Sweet flavor of Ben Tre – Deep love for the coconut homeland",
+    "description2": "From the fertile alluvial land, where the lush green coconut groves joyfully sway in the sun, Ngọc Mai Coconut Candy was born as a sweet gift imbued with the flavors of the Mekong Delta.",
+    "description3": "Let Ngoc Mai Coconut Candy accompany you during moments of reunion,\n                meaningful gifts to convey sincere love to family\n                and friends.",
+    "learnMore": "Learn More About the Product",
+    "name": "Ngoc Mai",
+    "naturalIngredients": "100% Natural Ingredients",
+    "title": "Coconut candy",
+    "traditionalCraft": "Traditional Handicrafts"
+  },
+  "productShow": {
+    "description": "Explore the diverse collection of coconut candies with unique flavors from Ngọc Mai",
+    "title": "Featured Products",
+    "viewDetail": "View Details"
+  },
+  "testimonials": {
+    "averageRating": "Average Rating",
+    "description": "Thousands of customers trust and love Ngoc Mai coconut candy products.",
+    "experience": "Years of Experience",
+    "provinces": "City",
+    "satisfiedCustomers": "Customer Satisfaction",
+    "title": "Customer Review",
+    "list": [
+      {
+        "name": "Ms. Minh Chau",
+        "location": "Ho Chi Minh City",
+        "rating": 5,
+        "comment": "Ngoc Mai coconut candy has a very delicious flavor, just like the taste of childhood. I've recommended it to many friends and everyone praises it.",
+        "avatar": "MC"
+      },
+      {
+        "name": "Mr. Van Thanh",
+        "location": "Hanoi",
+        "rating": 5,
+        "comment": "Bought it as a gift for family in the countryside, everyone praised it. Beautiful packaging, fast delivery. Will continue to support the brand.",
+        "avatar": "VT"
+      },
+      {
+        "name": "Ms. Thanh Huong",
+        "location": "Da Nang",
+        "rating": 5,
+        "comment": "Ngoc Mai coconut candy really satisfies me. Diverse candy, friendly and enthusiastic staff, truly traditional flavor.",
+        "avatar": "TH"
+      }
+    ]
+  },
+  "contactForm": {
+    "title": "Contact Order",
+    "subtitle": "Please leave your information for the best consultation and quotation for Ngoc Mai coconut candy products",
+    "formTitle": "Order Information",
+    "fields": {
+      "name": {
+        "label": "Full Name",
+        "placeholder": "Enter your full name",
+        "required": "Full name is required"
+      },
+      "phone": {
+        "label": "Phone Number",
+        "placeholder": "Enter your phone number",
+        "required": "Phone number must have at least 9 digits"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Enter your email",
+        "required": "Email is required",
+        "invalid": "Invalid email"
+      },
+      "message": {
+        "label": "Notes or Special Requests",
+        "placeholder": "Enter notes or special requests...",
+        "required": "Message is required"
+      }
+    },
+    "submit": {
+      "button": "Send Message",
+      "submitting": "Sending...",
+      "success": "Contact sent successfully! We will contact you as soon as possible.",
+      "error": "Failed to send contact! Please try again later.",
+      "errorSend": "Failed to send email"
+    },
+    "contactInfo": {
+      "title": "Contact Information",
+      "address": {
+        "label": "Address",
+        "value": "73B1 Nguyen Van Tu, P.Ben Tre, Vinh Long"
+      },
+      "phone": {
+        "label": "Phone",
+        "value": "0939.38.7070"
+      },
+      "email": {
+        "label": "Email",
+        "value": "keoduangocmaibentre@gmail.com"
+      },
+      "workingHours": {
+        "label": "Working Hours",
+        "value": "Monday - Sunday: 8:00 - 17:30"
+      }
+    },
+    "social": {
+      "title": "Connect With Us",
+      "phone": {
+        "label": "Phone Number",
+        "subtitle": "Ngoc Mai Coconut Candy"
+      },
+      "zalo": {
+        "label": "Zalo",
+        "subtitle": "0939.387.070"
+      }
+    },
+    "map": {
+      "title": "Google Maps",
+      "description": "Click to view detailed location"
+    }
+  },
+  "products": {
+    "list": [
+      {
+        "name": "Traditional Coconut Candy",
+        "origin": "Ben Tre",
+        "weight": "400g/box",
+        "shelfLife": "12 months from production date",
+        "description": "Classic flavor of Ben Tre coconut candy, processed according to traditional family recipe.",
+        "price": "Contact",
+        "features": ["Natural ingredients", "No preservatives"]
+      },
+      {
+        "name": "Durian Coconut Candy",
+        "origin": "Ben Tre",
+        "weight": "400g/box",
+        "shelfLife": "12 months from production date",
+        "description": "Perfect combination of sweet coconut flavor and distinctive durian aroma.",
+        "price": "Contact",
+        "features": ["Durian flavor", "Unique taste"]
+      },
+      {
+        "name": "Pandan Coconut Candy",
+        "origin": "Ben Tre",
+        "weight": "400g/box",
+        "shelfLife": "12 months from production date",
+        "description": "Natural green color from pandan leaves, bringing a fresh and special flavor.",
+        "price": "Contact",
+        "features": ["Natural pandan flavor", "Attractive color"]
+      },
+      {
+        "name": "Fresh Banana Coconut Candy",
+        "origin": "Ben Tre",
+        "weight": "400g/box",
+        "shelfLife": "12 months from production date",
+        "description": "Modern version with banana coating on the outside, preserving traditional coconut flavor.",
+        "price": "Contact",
+        "features": ["Fresh banana flavor", "Natural sweetness"]
+      },
+      {
+        "name": "Durian Pineapple Coconut Candy",
+        "origin": "Ben Tre",
+        "weight": "250g/pack",
+        "shelfLife": "12 months from production date",
+        "description": "Rich aroma of durian and gentle sweetness from ripe pineapple.",
+        "price": "Contact",
+        "features": ["Durian aroma", "Gentle pineapple sweetness"]
+      },
+      {
+        "name": "Assorted Coconut Candy",
+        "origin": "Ben Tre",
+        "weight": "250g/pack",
+        "shelfLife": "12 months from production date",
+        "description": "Rich and fragrant flavor of Ben Tre coconut milk with many attractive natural ingredients",
+        "price": "Contact",
+        "features": ["Diverse flavors", "Natural ingredients"]
+      },
+      {
+        "name": "Coconut Candy Stick",
+        "origin": "Ben Tre",
+        "weight": "120g/pack",
+        "shelfLife": "12 months from production date",
+        "description": "Made from natural ingredients such as fresh coconut milk, cane sugar, and malt",
+        "price": "Contact",
+        "features": ["Soft, fragrant and creamy", "Sweet aftertaste, unforgettable"]
+      }
+    ],
+    "common": {
+      "origin": "Origin",
+      "weight": "Weight",
+      "shelfLife": "Shelf Life",
+      "productInfo": "Product Information",
+      "features": "Key Features",
+      "storage": "Storage",
+      "storageDescription": "Store in a dry, cool place, avoid direct sunlight",
+      "contactOrder": "Contact to Order",
+      "back": "Back",
+      "notFound": "Product not found",
+      "goHome": "Go Home"
+    }
+  },
+  "footer": {
+    "companyName": "Ngoc Mai",
+    "description": "Leading coconut candy brand in Ben Tre with over 25 years of experience, delivering rich traditional flavors from the coconut land.",
+    "naturalIngredients": "100% Natural Ingredients",
+    "products": {
+      "title": "Products",
+      "traditional": "Traditional Coconut Candy",
+      "durian": "Durian Coconut Candy",
+      "pandan": "Pandan Coconut Candy",
+      "banana": "Banana Coconut Candy",
+      "giftBox": "Gift Box"
+    },
+    "services": {
+      "title": "Services",
+      "distributor": "Distribution Agents",
+      "onlineOrder": "Online Ordering",
+      "nationwideDelivery": "Nationwide Delivery",
+      "productConsultation": "Product Consultation",
+      "customerService": "Customer Service"
+    },
+    "contact": {
+      "title": "Contact",
+      "mainOffice": "Main Office",
+      "address": "73B1 Nguyen Van Tu, P.Ben Tre, Vinh Long"
+    },
+    "copyright": "© 2024 Ngoc Mai Coconut Candy. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "returnPolicy": "Return Policy",
+    "callButton": "Call",
+    "zaloButton": "Chat on Zalo"
+  }
+}

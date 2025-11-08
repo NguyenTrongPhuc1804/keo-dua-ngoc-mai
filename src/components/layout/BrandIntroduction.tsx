@@ -1,7 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 const BrandIntroduction = () => {
+  const t = useTranslations("brand");
   return (
     <section
       id="brand"
@@ -30,23 +32,19 @@ const BrandIntroduction = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <h2 className="text-4xl lg:text-5xl font-bold text-foreground">
-                Thương Hiệu Kẹo dừa
-                <span className="block text-coconut-brown">Ngọc Mai</span>
+                {t("title")}
+                <span className="block text-coconut-brown">{t("name")}</span>
               </h2>
               <div className="w-24 h-1 bg-nature-green rounded-full"></div>
             </div>
 
             <div className="space-y-6 text-muted-foreground">
               <p className="text-lg leading-relaxed">
-                Được thành lập từ năm 1995 tại Bến Tre - xứ sở của những cây dừa
-                xanh mướt, Ngọc Mai tự hào là thương hiệu kẹo dừa hàng đầu miền
-                Tây.
+                {t("description")}
               </p>
 
               <p className="text-lg leading-relaxed">
-                Với hơn 25 năm kinh nghiệm, chúng tôi luôn giữ gìn bí quyết làm
-                kẹo truyền thống được truyền lại từ thế hệ cha ông, kết hợp với
-                công nghệ hiện đại để tạo ra những sản phẩm chất lượng cao.
+                  {t("description2")}
               </p>
             </div>
 
@@ -57,7 +55,7 @@ const BrandIntroduction = () => {
                     25+
                   </div>
                   <div className="text-sm text-muted-foreground">
-                    Năm Kinh Nghiệm
+                    {t("experience")}
                   </div>
                 </CardContent>
               </Card>
@@ -68,7 +66,7 @@ const BrandIntroduction = () => {
                     100%
                   </div>
                   <div className="text-sm text-muted-foreground">
-                    Nguyên Liệu Tự Nhiên
+                    {t("naturalIngredients")}
                   </div>
                 </CardContent>
               </Card>

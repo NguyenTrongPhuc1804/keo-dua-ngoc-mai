@@ -3,26 +3,30 @@ import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/i18n/navigation";
+import LanguageSelector from "./LanguageSelector";
 
-const navigationItems = [
-  { id: "hero", label: "Trang Chủ" },
-  { id: "brand", label: "Giới Thiệu" },
-  { id: "products", label: "Sản Phẩm" },
-  // { id: "process", label: "Quy Trình" },
-  { id: "testimonials", label: "Đánh Giá" },
-  { id: "contact", label: "Liên Hệ" },
-];
 
 const NavigationHeader = () => {
   const router = useRouter();
+  const t = useTranslations("header");
+  const navigationItems = [
+    { id: "hero", label: t("home") },
+    { id: "brand", label: t("intro") },
+    { id: "products", label: t("product") },
+    // { id: "process", label: "Quy Trình" },
+    { id: "testimonials", label: t("rating") },
+    { id: "contact", label: t("contact") },
+  ];
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-coconut-brown/10 shadow-sm ">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 cursor-pointer ">
           {/* Logo */}
+   
           <div
             className="flex items-center gap-3"
             onClick={() => router.push("/")}
@@ -30,13 +34,13 @@ const NavigationHeader = () => {
             <Image
               loading="lazy"
               src="/image/logo.png"
-              alt="Kẹo Dừa Ngọc Mai"
+              alt={t("name")}
               width={40}
               height={40}
               className="rounded-full"
             />
             <span className="text-xl font-bold text-coconut-brown">
-              Kẹo Dừa Ngọc Mai
+              {t("name")}
             </span>
           </div>
 
@@ -56,6 +60,11 @@ const NavigationHeader = () => {
               ))}
             </nav>
           </ScrollArea>
+
+          {/* Language Selector - Desktop */}
+          <div className="hidden md:flex">
+            <LanguageSelector />
+          </div>
 
           {/* Mobile Navigation */}
           <Sheet>
@@ -77,6 +86,10 @@ const NavigationHeader = () => {
                     {item.label}
                   </Button>
                 ))}
+                {/* Language Selector - Mobile */}
+                <div className="mt-4">
+                  <LanguageSelector />
+                </div>
                 {/* <Button
                   onClick={() => router.push("/#contact")}
                   variant="hero"

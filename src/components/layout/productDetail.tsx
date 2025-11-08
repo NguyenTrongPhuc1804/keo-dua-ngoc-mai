@@ -4,11 +4,14 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Product } from "@/interfaces/product.interface";
 import { ArrowLeft, CheckCircle } from "lucide-react";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/i18n/navigation";
 import React, { useState } from "react";
+import { useTranslations } from "next-intl";
+
 const ProductDetail = ({ product }: { product: Product }) => {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const router = useRouter();
+  const t = useTranslations("products.common");
 
   return (
     <div className="min-h-screen bg-background">
@@ -22,7 +25,7 @@ const ProductDetail = ({ product }: { product: Product }) => {
             className="gap-2"
           >
             <ArrowLeft className="w-4 h-4" />
-            Quay lại
+            {t("back")}
           </Button>
         </div>
       </div>
@@ -84,23 +87,23 @@ const ProductDetail = ({ product }: { product: Product }) => {
             <Card>
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold text-foreground mb-4">
-                  Thông tin sản phẩm
+                  {t("productInfo")}
                 </h3>
                 <div className="space-y-3">
                   <div className="flex justify-between items-center">
-                    <span className="text-muted-foreground">Xuất xứ:</span>
+                    <span className="text-muted-foreground">{t("origin")}:</span>
                     <span className="font-medium text-foreground">
                       {product.origin}
                     </span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-muted-foreground">Trọng lượng:</span>
+                    <span className="text-muted-foreground">{t("weight")}:</span>
                     <span className="font-medium text-foreground">
                       {product.weight}
                     </span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-muted-foreground">Hạn sử dụng:</span>
+                    <span className="text-muted-foreground">{t("shelfLife")}:</span>
                     <span className="font-medium text-foreground">
                       {product.shelfLife}
                     </span>
@@ -113,7 +116,7 @@ const ProductDetail = ({ product }: { product: Product }) => {
             <Card>
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold text-foreground mb-4">
-                  Đặc điểm nổi bật
+                  {t("features")}
                 </h3>
                 <div className="space-y-3">
                   {product.features.map((feature, index) => (
@@ -149,10 +152,10 @@ const ProductDetail = ({ product }: { product: Product }) => {
             <Card>
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold text-foreground mb-4">
-                  Bảo quản
+                  {t("storage")}
                 </h3>
                 <p className="text-muted-foreground">
-                  Bảo quản nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp
+                  {t("storageDescription")}
                 </p>
               </CardContent>
             </Card>
@@ -194,7 +197,7 @@ const ProductDetail = ({ product }: { product: Product }) => {
                 className="w-full text-lg py-6"
                 onClick={() => router.push("/#contact")}
               >
-                Liên hệ đặt hàng
+                {t("contactOrder")}
               </Button>
             </div>
           </div>

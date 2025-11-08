@@ -1,109 +1,57 @@
-import { Product } from "@/interfaces/product.interface";
-
-export const PRODUCTS: Product[] = [
+// Base product data - chỉ chứa thông tin không thay đổi (id, slug, images)
+// Translations được lấy từ messages files thông qua helper function
+export const PRODUCT_BASE_DATA = [
   {
     id: 1,
     slug: "keo-dua-truyen-thong",
-    name: "Kẹo Dừa Truyền Thống",
-    origin: "Bến Tre",
-    weight: "400g/hộp",
-    shelfLife: "12 tháng kể từ ngày sản xuất",
-    description:
-      "Hương vị cổ điển của kẹo dừa Bến Tre, được chế biến theo công thức gia truyền.",
-    price: "Liên hệ",
     image: "/image/keo-dua-beo.jpg",
     image2: "/image/keo-dua-beo.jpg",
     images: ["/image/keo-dua-beo.jpg"],
-    features: ["Nguyên liệu tự nhiên", "Không chất bảo quản"],
   },
   {
     id: 2,
     slug: "keo-dua-sau-rieng",
-    name: "Kẹo Dừa Sầu Riêng",
-    origin: "Bến Tre",
-    weight: "400g/hộp",
-    shelfLife: "12 tháng kể từ ngày sản xuất",
-    description:
-      "Sự kết hợp hoàn hảo giữa vị ngọt của dừa và hương thơm đặc trưng của sầu riêng.",
-    price: "Liên hệ",
     image: "/image/keo-dua-sau-rieng.jpg",
     image2: "/image/keo-dua-sau-rieng.jpg",
     images: ["/image/keo-dua-sau-rieng.jpg"],
-    features: ["Hương sầu riêng", "Vị độc đáo"],
   },
   {
     id: 3,
     slug: "keo-dua-la-dua",
-    name: "Kẹo Dừa Lá Dứa",
-    origin: "Bến Tre",
-    weight: "400g/hộp",
-    shelfLife: "12 tháng kể từ ngày sản xuất",
-    description:
-      "Màu xanh tự nhiên từ lá dứa, mang đến hương vị thanh mát và đặc biệt.",
-    price: "Liên hệ",
     image: "/image/keo-dua-la-dua.jpg",
     image2: "/image/keo-dua-la-dua.jpg",
     images: ["/image/keo-dua-la-dua.jpg"],
-    features: ["Hương lá dứa tự nhiên", "Màu sắc hấp dẫn"],
   },
   {
     id: 4,
     slug: "keo-dua-chuoi-tuoi",
-    name: "Kẹo Dừa Chuối Tươi",
-    origin: "Bến Tre",
-    weight: "400g/hộp",
-    shelfLife: "12 tháng kể từ ngày sản xuất",
-    description:
-      "Phiên bản hiện đại với lớp chuối bên ngoài, giữ nguyên hương vị dừa truyền thống.",
-    price: "Liên hệ",
     image: "/image/keo-dua-chuoi-tuoi.jpg",
     image2: "/image/keo-dua-chuoi-tuoi.jpg",
     images: ["/image/keo-dua-chuoi-tuoi.jpg"],
-    features: ["Hương chuối tươi", "Vị ngọt tự nhiên"],
   },
   {
     id: 5,
     slug: "keo-dua-sau-rieng-dua",
-    name: "Kẹo Dừa Sầu Riêng Dứa",
-    origin: "Bến Tre",
-    weight: "250g/gói",
-    shelfLife: "12 tháng kể từ ngày sản xuất",
-    description:
-      "Hương thơm nồng nàn của sầu riêng và vị ngọt dịu nhẹ từ dứa chín.",
-    price: "Liên hệ",
     image: "/image/keo-sau-rieng-dua.jpg",
     image2: "/image/keo-sau-rieng-dua.jpg",
     images: ["/image/keo-sau-rieng-dua.jpg"],
-    features: ["Hương thơm sầu riêng", "Vị ngọt dịu nhẹ dứa chín"],
   },
   {
     id: 6,
     slug: "keo-dua-thap-cam",
-    name: "Kẹo Dừa Thập Cẩm",
-    origin: "Bến Tre",
-    weight: "250g/gói",
-    shelfLife: "12 tháng kể từ ngày sản xuất",
-    description:
-      "Vị béo thơm của nước cốt dừa Bến Tre với nhiều loại nguyên liệu tự nhiên hấp dẫn",
-    price: "Liên hệ",
     image: "/image/keo-dua-thap-cam-2.jpg",
     image2: "/image/keo-dua-thap-cam.jpeg",
     images: ["/image/keo-dua-thap-cam-2.jpg", "/image/keo-dua-thap-cam.jpeg"],
-    features: ["Hương vị đa dạng", "Nguyên liệu tự nhiên"],
   },
   {
-    id: 6,
+    id: 7,
     slug: "keo-dua-que",
-    name: "Kẹo Dừa Que",
-    origin: "Bến Tre",
-    weight: "120g/gói",
-    shelfLife: "12 tháng kể từ ngày sản xuất",
-    description:
-      "Được làm từ những nguyên liệu tự nhiên như nước cốt dừa tươi, đường mía, và mạch nha",
-    price: "Liên hệ",
     image: "/image/hero-top.jpg",
     image2: "/image/hero-top.jpg",
     images: ["/image/hero-top.jpg"],
-    features: ["Dẻo thơm béo ngậy", "Dư vị ngọt ngào, khó quên"],
   },
 ];
+
+// Export PRODUCTS để tương thích với code cũ (sử dụng trong sitemap)
+// Lưu ý: Nên sử dụng getTranslatedProducts từ helper thay vì PRODUCTS
+export const PRODUCTS = PRODUCT_BASE_DATA;

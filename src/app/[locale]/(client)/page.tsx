@@ -6,6 +6,7 @@ import Testimonials from "@/components/layout/Testimonials";
 import { Toaster } from "sonner";
 import type { Metadata } from "next";
 import Script from "next/script";
+import { setRequestLocale } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Kẹo Dừa Ngọc Mai - Đặc sản Truyền Thống",
@@ -120,7 +121,9 @@ export const metadata: Metadata = {
 //   },
 // };
 
-export default function Home() {
+export default async function Home({params}: {params: Promise<{locale: string}>}) {
+  const {locale} = await params;
+  setRequestLocale(locale);
   return (
     <div className="min-h-screen">
       {/* <Script

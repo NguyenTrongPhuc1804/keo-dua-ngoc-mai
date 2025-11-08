@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -18,20 +18,25 @@ import {
   FormMessage,
   Form,
 } from "../ui/form";
-
-const formSchema = z.object({
-  name: z
-    .string()
-    .nonempty("Họ tên là bắt buộc")
-    .min(1, "Họ và tên là bắt buộc"),
-  email: z.string().nonempty("Email là bắt buộc").email("Email không hợp lệ"),
-  message: z.string().min(1, "Nội dung là bắt buộc"),
-  phone: z.string().min(9, "Số điện thoại phải có ít nhất 9 chữ số"),
-});
+import { useTranslations } from "next-intl";
 
 const ContactForm = () => {
-  //---------------------------------------------------
+  const t = useTranslations("contactForm");
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const formSchema = useMemo(
+    () =>
+      z.object({
+        name: z.string().min(1, t("fields.name.required")),
+        email: z
+          .string()
+          .min(1, t("fields.email.required"))
+          .email(t("fields.email.invalid")),
+        message: z.string().min(1, t("fields.message.required")),
+        phone: z.string().min(9, t("fields.phone.required")),
+      }),
+    [t]
+  );
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -55,16 +60,14 @@ const ContactForm = () => {
       });
 
       if (!res.ok) {
-        throw new Error("Gửi email thất bại");
+        throw new Error(t("submit.errorSend"));
       }
 
-      toast.success(
-        "Gửi liên hệ thành công! Chúng tôi sẽ liên hệ lại với bạn trong thời gian sớm nhất."
-      );
+      toast.success(t("submit.success"));
       form.reset();
     } catch (error) {
       console.error("Client error:", error);
-      toast.error("Gửi liên hệ thất bại! Vui lòng thử lại sau.");
+      toast.error(t("submit.error"));
     } finally {
       setIsSubmitting(false);
     }
@@ -83,11 +86,10 @@ const ContactForm = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Liên Hệ Đặt Hàng
+            {t("title")}
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Hãy để lại thông tin để được tư vấn và báo giá tốt nhất cho sản phẩm
-            kẹo dừa Ngọc Mai
+            {t("subtitle")}
           </p>
           <div className="w-24 h-1 bg-coconut-brown rounded-full mx-auto mt-6"></div>
         </div>
@@ -97,7 +99,7 @@ const ContactForm = () => {
           <Card className="border-0 shadow-xl bg-white/90 backdrop-blur-sm">
             <CardHeader>
               <CardTitle className="text-2xl text-foreground">
-                Thông Tin Đặt Hàng
+                {t("formTitle")}
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -114,10 +116,13 @@ const ContactForm = () => {
                         render={({ field }) => (
                           <FormItem>
                             <FormLabel className="text-sm font-medium">
-                              Họ và tên
+                              {t("fields.name.label")}
                             </FormLabel>
                             <FormControl>
-                              <Input placeholder="Nhập họ và tên" {...field} />
+                              <Input
+                                placeholder={t("fields.name.placeholder")}
+                                {...field}
+                              />
                             </FormControl>
 
                             <FormMessage />
@@ -132,11 +137,11 @@ const ContactForm = () => {
                         render={({ field }) => (
                           <FormItem>
                             <FormLabel className="text-sm font-medium">
-                              Số điện thoại
+                              {t("fields.phone.label")}
                             </FormLabel>
                             <FormControl>
                               <Input
-                                placeholder="Nhập số điện thoại"
+                                placeholder={t("fields.phone.placeholder")}
                                 {...field}
                               />
                             </FormControl>
@@ -155,10 +160,13 @@ const ContactForm = () => {
                       render={({ field }) => (
                         <FormItem>
                           <FormLabel className="text-sm font-medium">
-                            Email
+                            {t("fields.email.label")}
                           </FormLabel>
                           <FormControl>
-                            <Input placeholder="Nhập email" {...field} />
+                            <Input
+                              placeholder={t("fields.email.placeholder")}
+                              {...field}
+                            />
                           </FormControl>
 
                           <FormMessage />
@@ -174,12 +182,12 @@ const ContactForm = () => {
                       render={({ field }) => (
                         <FormItem>
                           <FormLabel className="text-sm font-medium">
-                            Ghi chú hoặc yêu cầu đặc biệt
+                            {t("fields.message.label")}
                           </FormLabel>
                           <FormControl>
                             <Textarea
                               required
-                              placeholder="Nhập ghi chú hoặc yêu cầu đặc biệt..."
+                              placeholder={t("fields.message.placeholder")}
                               {...field}
                             />
                           </FormControl>
@@ -196,7 +204,9 @@ const ContactForm = () => {
                     size="lg"
                     className="w-full"
                   >
-                    {isSubmitting ? "Đang gửi..." : "Gửi tin nhắn"}
+                    {isSubmitting
+                      ? t("submit.submitting")
+                      : t("submit.button")}
                   </Button>
                 </form>
               </Form>
@@ -209,7 +219,7 @@ const ContactForm = () => {
             <Card className="border-0 shadow-lg bg-white/90 backdrop-blur-sm">
               <CardHeader>
                 <CardTitle className="text-2xl text-foreground">
-                  Thông Tin Liên Hệ
+                  {t("contactInfo.title")}
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
@@ -219,10 +229,10 @@ const ContactForm = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">
-                      Địa Chỉ
+                      {t("contactInfo.address.label")}
                     </h4>
                     <p className="text-muted-foreground">
-                      73B1 Nguyễn Văn Tư, P.Bến Tre, Vĩnh Long
+                      {t("contactInfo.address.value")}
                     </p>
                   </div>
                 </div>
@@ -233,9 +243,11 @@ const ContactForm = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">
-                      Điện Thoại
+                      {t("contactInfo.phone.label")}
                     </h4>
-                    <p className="text-muted-foreground">0939.38.7070</p>
+                    <p className="text-muted-foreground">
+                      {t("contactInfo.phone.value")}
+                    </p>
                   </div>
                 </div>
 
@@ -245,10 +257,10 @@ const ContactForm = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">
-                      Email
+                      {t("contactInfo.email.label")}
                     </h4>
                     <p className="text-muted-foreground">
-                      keoduangocmaibentre@gmail.com
+                      {t("contactInfo.email.value")}
                     </p>
                   </div>
                 </div>
@@ -259,10 +271,10 @@ const ContactForm = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">
-                      Giờ Làm Việc
+                      {t("contactInfo.workingHours.label")}
                     </h4>
                     <p className="text-muted-foreground">
-                      Thứ 2 - CN: 8:00 - 17:30
+                      {t("contactInfo.workingHours.value")}
                     </p>
                   </div>
                 </div>
@@ -273,7 +285,7 @@ const ContactForm = () => {
             <Card className="border-0 shadow-lg bg-white/90 backdrop-blur-sm">
               <CardHeader>
                 <CardTitle className="text-xl text-foreground">
-                  Kết Nối Với Chúng Tôi
+                  {t("social.title")}
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -287,9 +299,11 @@ const ContactForm = () => {
                   >
                     <Phone className="w-5 h-5 text-blue-600" />
                     <div className="text-left">
-                      <div className="text-sm font-medium">Số điện thoại</div>
+                      <div className="text-sm font-medium">
+                        {t("social.phone.label")}
+                      </div>
                       <div className="text-xs text-muted-foreground">
-                        Kẹo Dừa Ngọc Mai
+                        {t("social.phone.subtitle")}
                       </div>
                     </div>
                   </Button>
@@ -303,9 +317,11 @@ const ContactForm = () => {
                   >
                     <MessageCircle className="w-5 h-5 text-green-600" />
                     <div className="text-left">
-                      <div className="text-sm font-medium">Zalo</div>
+                      <div className="text-sm font-medium">
+                        {t("social.zalo.label")}
+                      </div>
                       <div className="text-xs text-muted-foreground">
-                        0939.387.070
+                        {t("social.zalo.subtitle")}
                       </div>
                     </div>
                   </Button>
@@ -324,14 +340,14 @@ const ContactForm = () => {
                       height="450"
                       loading="lazy"
                       allowFullScreen
-                      title="Bản đồ Google Maps"
+                      title={t("map.title")}
                       referrerPolicy="no-referrer-when-downgrade"
                       className="w-full h-full rounded-lg absolute inset-0"
                     ></iframe>
                     <MapPin className="z-50 w-12 h-12 text-coconut-brown mx-auto mb-2" />
-                    <p className="text-muted-foreground">Bản đồ Google Maps</p>
+                    <p className="text-muted-foreground">{t("map.title")}</p>
                     <p className="text-sm text-muted-foreground">
-                      Nhấp để xem vị trí chi tiết
+                      {t("map.description")}
                     </p>
                   </div>
                 </div>

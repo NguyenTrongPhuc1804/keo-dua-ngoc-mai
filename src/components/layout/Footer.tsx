@@ -1,8 +1,12 @@
+"use client";
+
 import { Mail, MapPin, Phone, MessageCircle } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 const Footer = () => {
+  const t = useTranslations("footer");
   return (
     <footer className="bg-coconut-brown text-coconut-cream">
       <div className="container mx-auto px-4 py-16">
@@ -13,35 +17,34 @@ const Footer = () => {
               <div className="w-8 h-8 bg-coconut-cream rounded-full flex items-center justify-center">
                 <Image
                   src="/image/logo.png"
-                  alt="Ngọc Mai"
+                  alt={t("companyName")}
                   width={32}
                   height={32}
                   loading="lazy"
                   className="w-8 h-8 rounded-full   "
                 />
               </div>
-              <h3 className="text-2xl font-bold">Ngọc Mai</h3>
+              <h3 className="text-2xl font-bold">{t("companyName")}</h3>
             </div>
             <p className="text-coconut-cream/80 leading-relaxed">
-              Thương hiệu kẹo dừa hàng đầu Bến Tre với hơn 25 năm kinh nghiệm,
-              mang đến hương vị truyền thống đậm đà từ xứ sở dừa.
+              {t("description")}
             </p>
             <div className="flex items-center gap-2">
               <div className="w-3 h-3 bg-nature-green rounded-full"></div>
-              <span className="text-sm">100% Nguyên liệu tự nhiên</span>
+              <span className="text-sm">{t("naturalIngredients")}</span>
             </div>
           </div>
 
           {/* Products */}
           <div className="space-y-4">
-            <h4 className="text-xl font-bold">Sản Phẩm</h4>
+            <h4 className="text-xl font-bold">{t("products.title")}</h4>
             <ul className="space-y-2 text-coconut-cream/80">
               <li>
                 <Link
                   href="/#products"
                   className="hover:text-coconut-cream transition-colors"
                 >
-                  Kẹo Dừa Truyền Thống
+                  {t("products.traditional")}
                 </Link>
               </li>
               <li>
@@ -49,7 +52,7 @@ const Footer = () => {
                   href="/#products"
                   className="hover:text-coconut-cream transition-colors"
                 >
-                  Kẹo Dừa Sầu Riêng
+                  {t("products.durian")}
                 </Link>
               </li>
               <li>
@@ -57,7 +60,7 @@ const Footer = () => {
                   href="/#products"
                   className="hover:text-coconut-cream transition-colors"
                 >
-                  Kẹo Dừa Lá Dứa
+                  {t("products.pandan")}
                 </Link>
               </li>
               <li>
@@ -65,7 +68,7 @@ const Footer = () => {
                   href="/#products"
                   className="hover:text-coconut-cream transition-colors"
                 >
-                  Kẹo Dừa Chuối
+                  {t("products.banana")}
                 </Link>
               </li>
               <li>
@@ -73,7 +76,7 @@ const Footer = () => {
                   href="/#products"
                   className="hover:text-coconut-cream transition-colors"
                 >
-                  Hộp Quà Tặng
+                  {t("products.giftBox")}
                 </Link>
               </li>
             </ul>
@@ -81,14 +84,14 @@ const Footer = () => {
 
           {/* Services */}
           <div className="space-y-4">
-            <h4 className="text-xl font-bold">Dịch Vụ</h4>
+            <h4 className="text-xl font-bold">{t("services.title")}</h4>
             <ul className="space-y-2 text-coconut-cream/80">
               <li>
                 <Link
                   href="#"
                   className="hover:text-coconut-cream transition-colors"
                 >
-                  Đại Lý Phân Phối
+                  {t("services.distributor")}
                 </Link>
               </li>
               <li>
@@ -96,7 +99,7 @@ const Footer = () => {
                   href="#"
                   className="hover:text-coconut-cream transition-colors"
                 >
-                  Đặt Hàng Online
+                  {t("services.onlineOrder")}
                 </Link>
               </li>
               <li>
@@ -104,7 +107,7 @@ const Footer = () => {
                   href="#"
                   className="hover:text-coconut-cream transition-colors"
                 >
-                  Giao Hàng Toàn Quốc
+                  {t("services.nationwideDelivery")}
                 </Link>
               </li>
               <li>
@@ -112,7 +115,7 @@ const Footer = () => {
                   href="#"
                   className="hover:text-coconut-cream transition-colors"
                 >
-                  Tư Vấn Sản Phẩm
+                  {t("services.productConsultation")}
                 </Link>
               </li>
               <li>
@@ -120,7 +123,7 @@ const Footer = () => {
                   href="#"
                   className="hover:text-coconut-cream transition-colors"
                 >
-                  Chăm Sóc Khách Hàng
+                  {t("services.customerService")}
                 </Link>
               </li>
             </ul>
@@ -128,14 +131,14 @@ const Footer = () => {
 
           {/* Contact */}
           <div className="space-y-4">
-            <h4 className="text-xl font-bold">Liên Hệ</h4>
+            <h4 className="text-xl font-bold">{t("contact.title")}</h4>
             <div className="space-y-3 text-coconut-cream/80">
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0" />
                 <div>
-                  <p className="font-medium">Văn Phòng Chính</p>
+                  <p className="font-medium">{t("contact.mainOffice")}</p>
                   <p className="text-sm">
-                    73B1 Nguyễn Văn Tư, P.Bến Tre, Vĩnh Long
+                    {t("contact.address")}
                   </p>
                 </div>
               </div>
@@ -181,26 +184,26 @@ const Footer = () => {
         <div className="border-t border-coconut-cream/20 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-coconut-cream/80 text-sm">
-              © 2024 Kẹo Dừa Ngọc Mai. Tất cả quyền được bảo lưu.
+              {t("copyright")}
             </div>
             <div className="flex items-center gap-6 text-sm text-coconut-cream/80">
               <Link
                 href="#"
                 className="hover:text-coconut-cream transition-colors"
               >
-                Chính Sách Bảo Mật
+                {t("privacyPolicy")}
               </Link>
               <Link
                 href="#"
                 className="hover:text-coconut-cream transition-colors"
               >
-                Điều Khoản Sử Dụng
+                {t("termsOfService")}
               </Link>
               <Link
                 href="#"
                 className="hover:text-coconut-cream transition-colors"
               >
-                Chính Sách Đổi Trả
+                {t("returnPolicy")}
               </Link>
             </div>
           </div>
@@ -212,14 +215,14 @@ const Footer = () => {
         <Link
           href="tel:0939387070"
           className="w-14 h-14 bg-nature-green hover:bg-nature-green/90 rounded-full flex items-center justify-center shadow-lg transition-all hover:scale-110"
-          aria-label="Gọi điện"
+          aria-label={t("callButton")}
         >
           <Phone className="w-6 h-6 text-white" />
         </Link>
         <Link
           href="https://zalo.me/0939387070"
           className="w-14 h-14 bg-blue-500 hover:bg-blue-600 rounded-full flex items-center justify-center shadow-lg transition-all hover:scale-110"
-          aria-label="Chat Zalo"
+          aria-label={t("zaloButton")}
         >
           <MessageCircle className="w-6 h-6 text-white" />
         </Link>

@@ -1,32 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Star } from "lucide-react";
-
-const testimonials = [
-  {
-    name: "Chị Minh Châu",
-    location: "TP. Hồ Chí Minh",
-    rating: 5,
-    comment:
-      "Kẹo dừa Ngọc Mai có vị rất thơm ngon, giống như hương vị thời thơ ấu. Tôi đã giới thiệu cho nhiều người bạn và mọi người đều khen ngợi.",
-    avatar: "MC",
-  },
-  {
-    name: "Anh Văn Thành",
-    location: "Hà Nội",
-    rating: 5,
-    comment:
-      "Mua về làm quà biếu gia đình ở quê, ai cũng khen ngon. Đóng gói đẹp, giao hàng nhanh. Sẽ tiếp tục ủng hộ thương hiệu.",
-    avatar: "VT",
-  },
-  {
-    name: "Cô Thanh Hương",
-    location: "Đà Nẵng",
-    rating: 5,
-    comment:
-      "Kẹo dừa Ngọc Mai thực sự làm tôi hài lòng. Kẹo đa dạng nhân viên thân thiện nhiệt tình, đúng chuẩn vị truyền thống.",
-    avatar: "TH",
-  },
-];
+import { useTranslations } from "next-intl";
 
 // const certifications = [
 //   {
@@ -52,6 +26,15 @@ const testimonials = [
 // ];
 
 const Testimonials = () => {
+  const t = useTranslations("testimonials");
+  const testimonials = t.raw("list") as Array<{
+    name: string;
+    location: string;
+    rating: number;
+    comment: string;
+    avatar: string;
+  }>;
+  
   return (
     <section
       id="testimonials"
@@ -65,11 +48,10 @@ const Testimonials = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Đánh Giá Khách Hàng
+            {t("title")}
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Hàng ngàn khách hàng tin tưởng và yêu thích sản phẩm kẹo dừa Ngọc
-            Mai
+              {t("description")}
           </p>
           <div className="w-24 h-1 bg-coconut-brown rounded-full mx-auto mt-6"></div>
         </div>
@@ -155,25 +137,25 @@ const Testimonials = () => {
             <div className="text-4xl font-bold text-coconut-brown mb-2">
               10,000+
             </div>
-            <div className="text-muted-foreground">Khách Hàng Hài Lòng</div>
+            <div className="text-muted-foreground">{t("satisfiedCustomers")}</div>
           </div>
           <div className="text-center">
             <div className="text-4xl font-bold text-coconut-brown mb-2">
               25+
             </div>
-            <div className="text-muted-foreground">Năm Kinh Nghiệm</div>
+            <div className="text-muted-foreground">{t("experience")}</div>
           </div>
           <div className="text-center">
             <div className="text-4xl font-bold text-coconut-brown mb-2">
               50+
             </div>
-            <div className="text-muted-foreground">Tỉnh Thành Phủ Sóng</div>
+            <div className="text-muted-foreground">{t("provinces")}</div>
           </div>
           <div className="text-center">
             <div className="text-4xl font-bold text-coconut-brown mb-2">
               4.9/5
             </div>
-            <div className="text-muted-foreground">Đánh Giá Trung Bình</div>
+            <div className="text-muted-foreground">{t("averageRating")}</div>
           </div>
         </div>
       </div>

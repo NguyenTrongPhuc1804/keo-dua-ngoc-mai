@@ -1,0 +1,247 @@
+{
+  "brand": {
+    "description": "Được thành lập từ năm 1995 tại Bến Tre - xứ sở của những cây dừa\n                xanh mướt, Ngọc Mai tự hào là thương hiệu kẹo dừa hàng đầu miền\n                Tây.",
+    "description2": "Với hơn 25 năm kinh nghiệm, chúng tôi luôn giữ gìn bí quyết làm\n                kẹo truyền thống được truyền lại từ thế hệ cha ông, kết hợp với\n                công nghệ hiện đại để tạo ra những sản phẩm chất lượng cao.",
+    "experience": "Năm Kinh Nghiệm",
+    "name": "Ngọc Mai",
+    "naturalIngredients": "Nguyên Liệu Tự Nhiên",
+    "title": "Thương Hiệu Kẹo dừa"
+  },
+  "header": {
+    "contact": "Liên Hệ",
+    "home": "Trang chủ",
+    "intro": "Giới thiệu",
+    "name": "Kẹo Dừa Ngọc Mai",
+    "product": "Sản phẩm",
+    "rating": "Đánh giá"
+  },
+  "hero": {
+    "buyNow": "Mua Ngay",
+    "certifiedATTP": "Chứng Nhận ATTP",
+    "description": "Ngọt lành hương vị Bến Tre – Đậm đà tình quê xứ Dừa",
+    "description2": "  Từ vùng đất phù sa trù phú, nơi những rặng dừa xanh ngát reo vui\n                trong nắng, Kẹo Dừa Ngọc Mai ra đời như một món quà ngọt ngào\n                mang đậm hương vị miền Tây Nam Bộ.",
+    "description3": "Hãy để Kẹo Dừa Ngọc Mai đồng hành cùng những phút giây sum vầy,\n                những món quà ý nghĩa gửi trao yêu thương chân thành đến người\n                thân, bạn bè.",
+    "learnMore": "Tìm Hiểu Thêm Sản Phẩm",
+    "name": "Ngọc Mai",
+    "naturalIngredients": "100% Nguyên Liệu Tự Nhiên",
+    "title": "Kẹo dừa",
+    "traditionalCraft": "Thủ Công Truyền Thống"
+  },
+  "productShow": {
+    "description": "Khám phá bộ sưu tập kẹo dừa đa dạng với nhiều hương vị độc đáo từ\n            Ngọc Mai",
+    "title": "Sản Phẩm Tiêu Biểu",
+    "viewDetail": "Xem Chi Tiết"
+  },
+  "testimonials": {
+    "averageRating": "Đánh Giá Trung Bình",
+    "description": "Hàng ngàn khách hàng tin tưởng và yêu thích sản phẩm kẹo dừa Ngọc Mai",
+    "experience": "Năm Kinh Nghiệm",
+    "provinces": "Tỉnh Thành Phủ Sóng",
+    "satisfiedCustomers": "Khách Hàng Hài Lòng",
+    "title": "Đánh Giá Khách Hàng",
+    "list": [
+      {
+        "name": "Chị Minh Châu",
+        "location": "TP. Hồ Chí Minh",
+        "rating": 5,
+        "comment": "Kẹo dừa Ngọc Mai có vị rất thơm ngon, giống như hương vị thời thơ ấu. Tôi đã giới thiệu cho nhiều người bạn và mọi người đều khen ngợi.",
+        "avatar": "MC"
+      },
+      {
+        "name": "Anh Văn Thành",
+        "location": "Hà Nội",
+        "rating": 5,
+        "comment": "Mua về làm quà biếu gia đình ở quê, ai cũng khen ngon. Đóng gói đẹp, giao hàng nhanh. Sẽ tiếp tục ủng hộ thương hiệu.",
+        "avatar": "VT"
+      },
+      {
+        "name": "Cô Thanh Hương",
+        "location": "Đà Nẵng",
+        "rating": 5,
+        "comment": "Kẹo dừa Ngọc Mai thực sự làm tôi hài lòng. Kẹo đa dạng nhân viên thân thiện nhiệt tình, đúng chuẩn vị truyền thống.",
+        "avatar": "TH"
+      }
+    ]
+  },
+  "contactForm": {
+    "title": "Liên Hệ Đặt Hàng",
+    "subtitle": "Hãy để lại thông tin để được tư vấn và báo giá tốt nhất cho sản phẩm kẹo dừa Ngọc Mai",
+    "formTitle": "Thông Tin Đặt Hàng",
+    "fields": {
+      "name": {
+        "label": "Họ và tên",
+        "placeholder": "Nhập họ và tên",
+        "required": "Họ và tên là bắt buộc"
+      },
+      "phone": {
+        "label": "Số điện thoại",
+        "placeholder": "Nhập số điện thoại",
+        "required": "Số điện thoại phải có ít nhất 9 chữ số"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Nhập email",
+        "required": "Email là bắt buộc",
+        "invalid": "Email không hợp lệ"
+      },
+      "message": {
+        "label": "Ghi chú hoặc yêu cầu đặc biệt",
+        "placeholder": "Nhập ghi chú hoặc yêu cầu đặc biệt...",
+        "required": "Nội dung là bắt buộc"
+      }
+    },
+    "submit": {
+      "button": "Gửi tin nhắn",
+      "submitting": "Đang gửi...",
+      "success": "Gửi liên hệ thành công! Chúng tôi sẽ liên hệ lại với bạn trong thời gian sớm nhất.",
+      "error": "Gửi liên hệ thất bại! Vui lòng thử lại sau.",
+      "errorSend": "Gửi email thất bại"
+    },
+    "contactInfo": {
+      "title": "Thông Tin Liên Hệ",
+      "address": {
+        "label": "Địa Chỉ",
+        "value": "73B1 Nguyễn Văn Tư, P.Bến Tre, Vĩnh Long"
+      },
+      "phone": {
+        "label": "Điện Thoại",
+        "value": "0939.38.7070"
+      },
+      "email": {
+        "label": "Email",
+        "value": "keoduangocmaibentre@gmail.com"
+      },
+      "workingHours": {
+        "label": "Giờ Làm Việc",
+        "value": "Thứ 2 - CN: 8:00 - 17:30"
+      }
+    },
+    "social": {
+      "title": "Kết Nối Với Chúng Tôi",
+      "phone": {
+        "label": "Số điện thoại",
+        "subtitle": "Kẹo Dừa Ngọc Mai"
+      },
+      "zalo": {
+        "label": "Zalo",
+        "subtitle": "0939.387.070"
+      }
+    },
+    "map": {
+      "title": "Bản đồ Google Maps",
+      "description": "Nhấp để xem vị trí chi tiết"
+    }
+  },
+  "products": {
+    "list": [
+      {
+        "name": "Kẹo Dừa Truyền Thống",
+        "origin": "Bến Tre",
+        "weight": "400g/hộp",
+        "shelfLife": "12 tháng kể từ ngày sản xuất",
+        "description": "Hương vị cổ điển của kẹo dừa Bến Tre, được chế biến theo công thức gia truyền.",
+        "price": "Liên hệ",
+        "features": ["Nguyên liệu tự nhiên", "Không chất bảo quản"]
+      },
+      {
+        "name": "Kẹo Dừa Sầu Riêng",
+        "origin": "Bến Tre",
+        "weight": "400g/hộp",
+        "shelfLife": "12 tháng kể từ ngày sản xuất",
+        "description": "Sự kết hợp hoàn hảo giữa vị ngọt của dừa và hương thơm đặc trưng của sầu riêng.",
+        "price": "Liên hệ",
+        "features": ["Hương sầu riêng", "Vị độc đáo"]
+      },
+      {
+        "name": "Kẹo Dừa Lá Dứa",
+        "origin": "Bến Tre",
+        "weight": "400g/hộp",
+        "shelfLife": "12 tháng kể từ ngày sản xuất",
+        "description": "Màu xanh tự nhiên từ lá dứa, mang đến hương vị thanh mát và đặc biệt.",
+        "price": "Liên hệ",
+        "features": ["Hương lá dứa tự nhiên", "Màu sắc hấp dẫn"]
+      },
+      {
+        "name": "Kẹo Dừa Chuối Tươi",
+        "origin": "Bến Tre",
+        "weight": "400g/hộp",
+        "shelfLife": "12 tháng kể từ ngày sản xuất",
+        "description": "Phiên bản hiện đại với lớp chuối bên ngoài, giữ nguyên hương vị dừa truyền thống.",
+        "price": "Liên hệ",
+        "features": ["Hương chuối tươi", "Vị ngọt tự nhiên"]
+      },
+      {
+        "name": "Kẹo Dừa Sầu Riêng Dứa",
+        "origin": "Bến Tre",
+        "weight": "250g/gói",
+        "shelfLife": "12 tháng kể từ ngày sản xuất",
+        "description": "Hương thơm nồng nàn của sầu riêng và vị ngọt dịu nhẹ từ dứa chín.",
+        "price": "Liên hệ",
+        "features": ["Hương thơm sầu riêng", "Vị ngọt dịu nhẹ dứa chín"]
+      },
+      {
+        "name": "Kẹo Dừa Thập Cẩm",
+        "origin": "Bến Tre",
+        "weight": "250g/gói",
+        "shelfLife": "12 tháng kể từ ngày sản xuất",
+        "description": "Vị béo thơm của nước cốt dừa Bến Tre với nhiều loại nguyên liệu tự nhiên hấp dẫn",
+        "price": "Liên hệ",
+        "features": ["Hương vị đa dạng", "Nguyên liệu tự nhiên"]
+      },
+      {
+        "name": "Kẹo Dừa Que",
+        "origin": "Bến Tre",
+        "weight": "120g/gói",
+        "shelfLife": "12 tháng kể từ ngày sản xuất",
+        "description": "Được làm từ những nguyên liệu tự nhiên như nước cốt dừa tươi, đường mía, và mạch nha",
+        "price": "Liên hệ",
+        "features": ["Dẻo thơm béo ngậy", "Dư vị ngọt ngào, khó quên"]
+      }
+    ],
+    "common": {
+      "origin": "Xuất xứ",
+      "weight": "Trọng lượng",
+      "shelfLife": "Hạn sử dụng",
+      "productInfo": "Thông tin sản phẩm",
+      "features": "Đặc điểm nổi bật",
+      "storage": "Bảo quản",
+      "storageDescription": "Bảo quản nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp",
+      "contactOrder": "Liên hệ đặt hàng",
+      "back": "Quay lại",
+      "notFound": "Không tìm thấy sản phẩm",
+      "goHome": "Về trang chủ"
+    }
+  },
+  "footer": {
+    "companyName": "Ngọc Mai",
+    "description": "Thương hiệu kẹo dừa hàng đầu Bến Tre với hơn 25 năm kinh nghiệm, mang đến hương vị truyền thống đậm đà từ xứ sở dừa.",
+    "naturalIngredients": "100% Nguyên liệu tự nhiên",
+    "products": {
+      "title": "Sản Phẩm",
+      "traditional": "Kẹo Dừa Truyền Thống",
+      "durian": "Kẹo Dừa Sầu Riêng",
+      "pandan": "Kẹo Dừa Lá Dứa",
+      "banana": "Kẹo Dừa Chuối",
+      "giftBox": "Hộp Quà Tặng"
+    },
+    "services": {
+      "title": "Dịch Vụ",
+      "distributor": "Đại Lý Phân Phối",
+      "onlineOrder": "Đặt Hàng Online",
+      "nationwideDelivery": "Giao Hàng Toàn Quốc",
+      "productConsultation": "Tư Vấn Sản Phẩm",
+      "customerService": "Chăm Sóc Khách Hàng"
+    },
+    "contact": {
+      "title": "Liên Hệ",
+      "mainOffice": "Văn Phòng Chính",
+      "address": "73B1 Nguyễn Văn Tư, P.Bến Tre, Vĩnh Long"
+    },
+    "copyright": "© 2024 Kẹo Dừa Ngọc Mai. Tất cả quyền được bảo lưu.",
+    "privacyPolicy": "Chính Sách Bảo Mật",
+    "termsOfService": "Điều Khoản Sử Dụng",
+    "returnPolicy": "Chính Sách Đổi Trả",
+    "callButton": "Gọi điện",
+    "zaloButton": "Chat Zalo"
+  }
+}

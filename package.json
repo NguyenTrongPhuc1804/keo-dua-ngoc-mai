@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "concurrently \"i18nexus dev\" \"next dev --turbopack\"",
+    "build": "i18nexus build && next build",
+    "start": "i18nexus start && next start",
+    "lint": "i18nexus lint && next lint"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.0",
@@ -24,6 +24,7 @@
     "input-otp": "^1.4.2",
     "lucide-react": "^0.525.0",
     "next": "^15.4.4",
+    "next-intl": "^4.4.0",
     "next-themes": "^0.4.6",
     "nextjs-toploader": "^3.8.16",
     "nodemailer": "^7.0.5",
@@ -43,8 +44,10 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "autoprefixer": "^10.4.21",
+    "concurrently": "^9.2.1",
     "eslint": "^9",
     "eslint-config-next": "15.4.2",
+    "i18nexus-cli": "^3.8.2",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.11",
     "typescript": "^5"
