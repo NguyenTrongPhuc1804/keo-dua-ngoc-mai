@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "concurrently \"i18nexus dev\" \"next dev --turbopack\"",
-    "build": "i18nexus build && next build",
-    "start": "i18nexus start && next start",
-    "lint": "i18nexus lint && next lint"
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.0",
