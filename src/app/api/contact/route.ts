@@ -3,8 +3,44 @@ import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
   try {
-    const body = await req.json();
+    let body;
+    try {
+      body = await req.json();
+    } catch (error) {
+      console.error("Error parsing JSON:", error);
+      return NextResponse.json(
+        { message: "Invalid JSON format" },
+        { status: 400 }
+      );
+    }
+
     const { name, email, phone, message } = body;
+
+    // Validate required fields
+    if (!name || !email || !phone || !message) {
+      return NextResponse.json(
+        { message: "Vui lòng điền đầy đủ thông tin (name, email, phone, message)" },
+        { status: 400 }
+      );
+    }
+
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return NextResponse.json(
+        { message: "Email không hợp lệ" },
+        { status: 400 }
+      );
+    }
+
+    // Validate SMTP environment variables
+    if (!process.env.SMTP_HOST || !process.env.SMTP_PORT || !process.env.SMTP_USER || !process.env.SMTP_PASS || !process.env.SMTP_FROM || !process.env.SMTP_ME) {
+      console.error("Missing SMTP environment variables");
+      return NextResponse.json(
+        { message: "Server configuration error: Missing SMTP settings" },
+        { status: 500 }
+      );
+    }
 
     const [res1, res2] = await Promise.all([
       //send email to user
@@ -275,8 +311,12 @@ export async function POST(req: Request) {
     ]);
 
     if (!res1.success || !res2.success) {
+      console.error("Email sending failed:", { res1, res2 });
       return NextResponse.json(
-        { message: "Gửi email thất bại" },
+        { 
+          message: "Gửi email thất bại",
+          error: res1.success ? res2.error : res1.error
+        },
         { status: 500 }
       );
     }
@@ -284,6 +324,12 @@ export async function POST(req: Request) {
     return NextResponse.json({ message: "Gửi email thành công" });
   } catch (error) {
     console.error("API Error:", error);
-    return NextResponse.json({ message: "Server Error" }, { status: 500 });
+    return NextResponse.json(
+      { 
+        message: "Server Error",
+        error: error instanceof Error ? error.message : "Unknown error"
+      },
+      { status: 500 }
+    );
   }
 }
