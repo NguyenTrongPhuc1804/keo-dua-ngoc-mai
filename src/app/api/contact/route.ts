@@ -165,7 +165,7 @@ export async function POST(req: Request) {
 
       //send email to admin
       sendEmail({
-        to: process.env.SMTP_ME as string,
+        to: "keoduangocmaibentre@gmail.com",
         subject: `Có liên hệ mới từ khách hàng ${name}`,
         html: `
    <!DOCTYPE html>
