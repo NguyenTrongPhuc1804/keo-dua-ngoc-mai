@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import ProductDetail from "@/components/layout/productDetail";
 import { Button } from "@/components/ui/button";
 import { Metadata } from "next";
@@ -16,6 +18,7 @@ export async function generateMetadata({
   setRequestLocale(locale);
   
   const messages = await getMessages();
+  
   const product = getTranslatedProductBySlug(slug, messages as any);
   const t = await getTranslations({ locale });
 

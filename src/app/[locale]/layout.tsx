@@ -5,9 +5,8 @@ import NavigationHeader from "@/components/layout/NavigationHeader";
 import Footer from "@/components/layout/Footer";
 import NextTopLoader from "nextjs-toploader";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import Head from "next/head";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
-import { getMessages, setRequestLocale } from "next-intl/server";
+import {  setRequestLocale } from "next-intl/server";
 import routing from "@/i18n/routing";
 import { notFound } from "next/navigation";
 

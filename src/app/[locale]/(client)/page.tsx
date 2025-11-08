@@ -5,7 +5,6 @@ import ProductShowcase from "@/components/layout/ProductShowcase";
 import Testimonials from "@/components/layout/Testimonials";
 import { Toaster } from "sonner";
 import type { Metadata } from "next";
-import Script from "next/script";
 import { setRequestLocale } from "next-intl/server";
 
 export const metadata: Metadata = {
