@@ -18,7 +18,7 @@ const BrandIntroduction = () => {
           {/* Image */}
           <div className="relative">
             <Image
-              src="/image/intro-brand.png"
+              src="/image/intro-brand-new.jpg"
               alt="Vườn dừa Bến Tre"
               className="w-full h-full object-cover rounded-2xl shadow-lg"
               loading="lazy"
@@ -39,13 +39,9 @@ const BrandIntroduction = () => {
             </div>
 
             <div className="space-y-6 text-muted-foreground">
-              <p className="text-lg leading-relaxed">
-                {t("description")}
-              </p>
+              <p className="text-lg leading-relaxed">{t("description")}</p>
 
-              <p className="text-lg leading-relaxed">
-                  {t("description2")}
-              </p>
+              <p className="text-lg leading-relaxed">{t("description2")}</p>
             </div>
 
             <div className="grid grid-cols-2 gap-6">

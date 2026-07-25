@@ -33,7 +33,8 @@ const NavigationHeader = () => {
           >
             <Image
               loading="lazy"
-              src="/image/logo.png"
+              // src="/image/logo.png"
+              src="/logo-MN.png"
               alt={t("name")}
               width={40}
               height={40}

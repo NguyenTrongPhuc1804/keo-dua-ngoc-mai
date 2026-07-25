@@ -6,7 +6,7 @@ import Footer from "@/components/layout/Footer";
 import NextTopLoader from "nextjs-toploader";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
-import {  setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import routing from "@/i18n/routing";
 import { notFound } from "next/navigation";
 
@@ -119,21 +119,21 @@ export default async function RootLayout({
   params: Promise<{ locale: string }>;
 }>) {
   const { locale } = await params;
-  if (!hasLocale(routing.locales, locale)) { 
+  if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
-  
-setRequestLocale(locale);
+
+  setRequestLocale(locale);
 
   return (
     <html lang="vi">
       <body className="">
         <NextTopLoader />
         <GoogleAnalytics gaId="G-54KQGSXJWC" />
-        <NextIntlClientProvider >
-        <NavigationHeader/>
-        {children}
-        <Footer />
+        <NextIntlClientProvider>
+          <NavigationHeader />
+          {children}
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>
