@@ -29,10 +29,10 @@ const HeroSection = () => {
                 {t("description")}
               </p>
               <p className="text-lg text-muted-foreground max-w-lg mx-auto lg:mx-0">
-         { t("description2")}
+                {t("description2")}
               </p>
               <p className="text-lg text-muted-foreground max-w-lg mx-auto lg:mx-0">
-          {t("description3")}
+                {t("description3")}
               </p>
             </div>
 
@@ -74,7 +74,7 @@ const HeroSection = () => {
           <div className="relative">
             <div className="relative z-10">
               <Image
-                src={"/image/hero-top.jpg"}
+                src={"/image/hero-top.png"}
                 alt="Kẹo Dừa Ngọc Mai"
                 loading="lazy"
                 width={600}
