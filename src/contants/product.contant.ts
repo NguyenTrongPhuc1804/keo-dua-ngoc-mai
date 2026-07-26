@@ -46,9 +46,9 @@ export const PRODUCT_BASE_DATA = [
   {
     id: 7,
     slug: "keo-dua-que",
-    image: "/image/hero-top.jpg",
-    image2: "/image/hero-top.jpg",
-    images: ["/image/hero-top.jpg"],
+    image: "/image/hero-top.png",
+    image2: "/image/hero-top.png",
+    images: ["/image/hero-top.png"],
   },
 ];
 
